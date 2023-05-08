@@ -1,2 +1,2 @@
 # trabalhos
-trabalhos e atividades feitas na ETEC 
+Alguns projetos que fiz na ETEC e pessoais (✿◡‿◡)
