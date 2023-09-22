@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');        
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(fotos/capa_1.jpg);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+}
+
+/*      MENU     */
+
+.menu{
+    justify-content: space-between;
+    display: flex;
+    max-width: 100%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 130%;
+}
+
+
+.menu ul{
+list-style: none;
+justify-content: space-between;
+display: flex; 
+padding: 12px 25px;
+gap: 5px;
+}
+
+.menu ul li a{
+color: rgba(255, 255, 255, 0.509);
+text-decoration: none;
+transition: color .5s;
+padding: 10px;
+
+}
+.menu ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+input{
+    background-color: rgba(245, 245, 220, 0);
+    border: 0 none;
+    outline: 0;
+    border-bottom: solid 2px #ffffff96;
+    margin-right: 40px;
+    padding-right: 70px;
+    color: #ffffff;
+    padding-top: 16px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.509);
+  }
+
+
+/*       MAIN      */
+
+main h1{
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 450%;
+    max-width: 30%;
+    padding-left: 5%;
+    padding-top: 3%;
+    text-shadow: 5px 10px 6px #000000;
+}
+
+
+main p{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-size: 130%;
+    max-width: 40%;
+    padding-left: 60px;
+    padding-top: 1%;
+    text-shadow: 5px 10px 6px #000000;
+}
+
+main button{
+    background-color: rgb(255, 255, 255);
+    border: 0 none;
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    margin-left: 10%;
+    margin-top: 1%;
+    transition: color .5s;
+    transition: background-color .5s;
+}
+
+main button:hover{
+    background-color: rgb(47, 10, 78);
+    color:#ffffff
+}
+
+
+/*      ARTICLE      */
+
+article #content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+
+article h1{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 200%;
+}
+
+article p{
+    color: #353131;
+    font-family: 'Work Sans', sans-serif;
+}
+
+article{
+    padding: 10%;
+    margin-top: 2%;
+}
+
+article img{
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+article img:hover{
+    transform: scale(1.1);
+}
+
+
+/*      ROW      */
+
+.col_e{
+    float: left;
+    padding: 50px;
+    width: 57%;
+}
+
+.col_e h1{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.col_d{
+    float: left;
+    width: 30%;
+    padding: 30px;
+}
+
+.card img{
+    width: 100%;
+    display: block;
+}
+
+.card {
+    margin-top: 20px;
+	height:40%;
+    position: relative;
+}
+
+.card h4{
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-size: 190%;
+    bottom: 0;
+    margin: 100px 20px;
+    color: #ffffff;
+    font: 130%;
+    text-shadow: 3px 2px 8px #000000aa;
+    display: none;
+}
+
+.card .menor{
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-size: 160%;
+    bottom: 0;
+    margin: 40px 20px;
+    color: #ffffff;
+    text-shadow: 3px 2px 8px #000000aa;
+    display: none;
+}
+
+.card p{
+    position: absolute;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 100%;
+    bottom: 0;
+    margin: 20px 20px;
+    color: #ffffff;
+    font: 130%;
+    text-shadow: 3px 2px 8px #000000aa;
+    display: none;
+}
+
+.card a{
+    position: absolute;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 100%;
+    bottom: 0;
+    margin: 20px 20px;
+    color: #ffffff;
+    font: 100%;
+    text-shadow: 3px 2px 8px #000000aa;
+    display: none;
+    text-decoration: none;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.66);
+    transition: all .5s ease;
+}
+
+.card:hover::before{
+    width: 100%;
+}
+
+.card:hover h4{
+    display:block;
+}
+
+
+.card:hover .menor{
+    display:block;
+}
+
+
+.card:hover p{
+    display:block;
+}
+
+.card:hover a{
+    display: block;
+}
+ 
+/*      GNRS      */
+
+.ctg{
+   justify-content: space-around;
+   display: flex;
+   margin-left: 4%;
+}
+
+.ctg img{
+    cursor: pointer;
+    margin-top: 2%;
+    transition: 0.6s;
+}
+
+.ctg img:hover{
+    transform: scale(1.1);
+}
+
+.h1_g{
+    font-family: 'Work Sans', sans-serif;
+    text-align: left;
+    padding-right: 30%;
+    margin-left: 4%;
+}
+
+.p_g{
+    font-family: 'Work Sans', sans-serif;
+    color: #353131;
+    margin-left: 4%;
+}
+
+/*   FOOTER    */
+footer {
+    position: absolute;
+    
+    background-color: rgb(60, 58, 66);
+    width: 100%;   
+    line-height: 50px;
+
+}
+
+footer i{
+    color: hsla(0, 0%, 100%, 0.495);
+    font-size: 180%;
+    transition:color .5s;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+footer i:hover{
+    color: #FFF;
+}
+
+footer .txt1{
+    margin-left: 66%;
+    color: hsla(0, 0%, 100%, 0.495);
+    text-decoration: none;
+    transition: color .5s;
+    font-family: 'Work Sans', sans-serif;
+}
+
+footer .txt1:hover{
+    color: #FFF;
+}
+
+footer .txt_foo{
+    width: 100%;
+    display: flex;
+    font-family: 'Work Sans', sans-serif;
+    color: hsla(0, 0%, 100%, 0.495);
+    margin-top: 1%;
+    font-size: 90%;
+    line-height: 25px;
+}
+
+footer .txt_foo p{
+    max-width: 25%;
+    margin-left: 3%;
+}
+
+footer .txt_foo ul{
+    list-style: none;
+    margin-left: 58%;
+}
+
+footer .txt_foo a{
+    color: hsla(0, 0%, 100%, 0.495);
+    text-decoration: none;
+    transition: color .5s;
+}
+
+footer .txt_foo a:hover{
+    color: #FFF;
+}
+
+.line{
+    max-width: 100%;
+    border: solid 1px #ffff;
+}
+
+@media screen and (max-width: 1072px){
+    .btn{display: none;}
+    main h1{
+        font-size: 330%;
+    }
+    main p{
+        font-size: 110%;
+    }
+    .col_e{
+        float: left;
+        padding: 50px;
+        width: 50%;
+    }
+    .col_d{
+        float: left;
+        width: 30%;
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 1231px){
+    .col_e{
+        float: left;
+        padding: 50px;
+        width: 46%;
+    }
+    .col_d{
+        float: left;
+        width: 29%;
+        padding: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    article{
+        margin-top: 10%;
+    }
+}
+@media screen and (min-width: 1400px){
+    article{
+        margin-top: 19%;
+    }
+}
