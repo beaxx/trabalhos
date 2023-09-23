@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
+:root{
+    --rosa_basico_escruto: rgb(163, 89, 89);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*   menu  */
 .menu{
     max-width: 100%;    
     display: flex;
@@ -30,10 +35,152 @@
 .menu a{
     text-decoration: none;
     color: rgb(31, 27, 27);
- 
+    transition: all 0.5s;
+}
+
+.menu a:hover{
+    color: var(--rosa_basico_escruto);
+    transform: 0.5s;
 }
 
 .img_menu{
     width: 10%;
     float: left;
+}
+
+/* botão de pesquisa */
+.menu .pesquisa input{
+    background-color: #ffffff00;
+    border: 0 none;
+    outline: 0;
+    border-bottom: solid 2px #000000;
+    width: 100%;
+}
+
+.menu .pesquisa input::placeholder{
+    color: #c9b8b8;
+    font-family: 'Inter', sans-serif;
+}
+
+.menu .pqs {
+    position:absolute;
+    top:0; right:0;
+    z-index:10;
+    background:transparent;
+    border: 0 none;
+    outline: 0;
+    cursor: pointer;
+    transition: color 0.5s;
+  }
+
+.menu .pqs:hover{
+    color: var(--rosa_basico_escruto);
+    transform: 0.5s;
+  }
+
+.menu .pesquisa{
+    position: relative;
+    width: 200px;
+}
+
+/* fim do botão de pesquisa */
+
+:root {
+    --menu-size: 250px;
+}
+
+#btnMenu {
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+#btnMenu:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(163, 89, 89);
+}
+
+#btnMenu:active {
+    background-color:rgb(105, 57, 57);;
+}
+
+#btnClose {
+    padding: 8px;
+    background-color: rgb(218, 168, 168);
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0 none;
+}
+
+#btnClose:active {
+    background-color: rgb(151, 73, 73);
+}
+
+.menul {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    width: var(--menu-size);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-right: solid 2px rgb(218, 168, 168);
+}
+
+.menul ul {
+    list-style: none;
+}
+
+.menul ul li {
+    display: block;
+}
+
+.menul ul li a {
+    transition: background 0.3s;
+    display: block;
+    color: #1e1717;
+    font-size: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.menul ul li a:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+.effect {
+    transition: margin 0.4s;
+}
+
+
+
+/* fim do menu */
+
+@media (min-width: 768px) {
+    #btnClose {
+        display: none;
+    }
+}
+
+
+  @media screen and (max-width: 800px){
+        .menu{
+            display: none;
+        }
+  }
+  @media screen and (max-width: 1100px){
+    .img_menu{
+        display: none;
+    }
+}
+@media screen and (min-width: 800px){
+    #btnMenu{
+        display: none;
+    }
+    .menul{
+        display: none;
+    }
 }
