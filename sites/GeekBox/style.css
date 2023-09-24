@@ -90,6 +90,7 @@ body{
 .logo_img{
     width: 6%;
     padding-left: 3%;
+    cursor: pointer;
 }
 
 .menu .pesquisa{
@@ -123,4 +124,14 @@ body{
 .menu .pqs:hover{
     transform: .3s;
     color: #fff;
+}
+
+.esq{
+float: left;
+width: 55%;
+}
+
+.drt{
+float: left;
+width: 45;
 }
