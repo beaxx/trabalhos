@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -134,4 +135,40 @@ width: 55%;
 .drt{
 float: left;
 width: 45;
+}
+
+footer{
+    background-color: #141212;
+    padding: 20px;
+    height: 100px;
+    width: 100%;
+
+    margin-bottom: 0px;
+    position: absolute  ;
+    font-family: 'Inter', sans-serif;
+}
+
+footer .txt{
+    color: #ffffff98;
+    transition: color .3s;
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 90%;
+}
+
+footer a i{
+    font-size: 150%;
+    padding-left: 35px;
+    color: #ffffff98;
+    transition: color .3s;
+}
+
+footer i:hover{
+    color: #ffffff;
+    transform: .3s;
+}
+
+footer .txt:hover{
+    color: #ffffff;
+    transform: .3s;
 }
