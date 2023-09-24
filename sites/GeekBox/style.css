@@ -129,16 +129,16 @@ body{
 
 .esq{
 float: left;
-width: 55%;
+width: 60%;
 }
 
 .drt{
 float: left;
-width: 45;
+width: 30%;
 }
 
 footer{
-    background-color: #141212;
+    background-color: #252323;
     padding: 20px;
     height: 100px;
     width: 100%;
@@ -171,4 +171,14 @@ footer i:hover{
 footer .txt:hover{
     color: #ffffff;
     transform: .3s;
+}
+
+footer .txtde{
+    color: #ffffff98;
+    font-size: 90%; 
+    padding-left: 175px;
+}
+
+footer .drt i{
+    padding-left: 340px;
 }
