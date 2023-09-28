@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="imagex/png" href="fotos/aquestre.png">
     <title>Aquestre - carrinho</title>
 </head>
 <body>
 <!-- menu -->
+<header>
 <nav class="menu">
     <ul>
         <li><img src="fotos/aquestre_menu.png" class="img_menu"></li>
-        <li><a href="index.html">home</a></li>
-        <li><a href="info.html">sobre</a></li>
-        <li><a href="carrinho.html">carrinho</a></li>
-        <li><a href="conta.html"><i class="fa-regular fa-user"></i></a></li>
+        <li><a href="index.html"><span class="material-symbols-outlined">home</span></a></li>
+        <li><a href="info.html"><span class="material-symbols-outlined">spa</span></a></li>
+        <li><a href="carrinho.html"><span class="material-symbols-outlined">shopping_basket</span></a></li>
+        <li><a href="conta.html"><span class="material-symbols-outlined">person</span></a></li>
         <div class="pesquisa">
             <input type="text" class="help" placeholder="pesquisar..."><button class="pqs"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div> 
@@ -35,16 +37,47 @@
             <li><a href="index.html">home</a></li>
             <li><a href="info.html">sobre</a></li>
             <li><a href="carrinho.html">carrinho</a></li>
-            <li><a href="conta.html"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="conta.html">conta</a></li>
         </ul>
     </nav>
 </div>
-
-<header></header>
-<main></main>
-<section></section>
-<article></article>
-<footer></footer>
+</header>
+<main>
+    <div class="eqd">
+        <div class="banner_cpm">
+            <div class="container_carrinho">
+                <div class="card_carrinho">
+                    <div class="img_card">
+                        <img src="fotos/buque2.jpg" class="bq" alt="buquê rosado">
+                    </div>
+                    <div class="txt_card">
+                        <h4>Buquê - tons de roxo</h4>
+                        <p>R$ 100,00</p>
+                        <p style="color: #6d6d6d; margin-top: 6%;">Um buquê simples, útil para todas as situações. <a href="#" style="text-decoration: none; color:var(--rosa_basico_escuro);">toque para ver mais</a>.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <div class="drt">
+        <form>
+        <p class="titulo">TOTAL</p>
+            <br>
+            <font style="font-size: 140%; margin-left: 16%;">Endereço: </font><br>
+            <input type="text" class="end" style="margin-left: 16%;">
+            <p>Formas de Pagamento: </p>
+            <input type="radio" class="bb" name="fdp" value="Boleto bancário">
+            <label><img src="fotos/boleto.png" width="7%">ㅤBoleto bancário</label><br>
+            <input type="radio" class="bb" name="fdp" value="Cartão de Crédito">
+            <label><img src="fotos/cc.png" width="6.7%">ㅤCartão de crédito</label><br>
+            <input type="radio" class="bb" name="fdp" value="Pix">
+            <label><img src="fotos/pix.png" width="7%">ㅤPix <font style="color:#c0c0c0; font-size: 70%;">(recomendado)</font></label>
+            <p style="font-size: 120%;">Valor total da compra: <a style="color: #a9a8a8;">$$</a></p>
+        <button onclick="javascript:alert('Compra realizada! Acompanhe sua compra na aba de PEDIDOS ')">COMPRAR</button>
+        
+    </form>
+    </div>
+</main>
 <script src="script.js"></script>
 </body>
 </html>

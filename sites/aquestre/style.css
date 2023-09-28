@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap');
 
 :root{
-    --rosa_basico_escruto: rgb(163, 89, 89);
+    --rosa_basico_escuro: rgb(163, 89, 89);
+    --rosa: #E3CCCC;
+    --rosa_cinza: #c1a7a7;
+    --branco: #ffff;
+    --escuro: #130303;
+    --rosa_sla:#7c6770;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 *{
@@ -10,22 +24,25 @@
     box-sizing: border-box;
 }
 
+main{
+    margin: auto;
+    max-width: 1280px;
+    min-width: none;
+}
+
 /*   menu  */
 .menu{
     max-width: 100%;    
-    display: flex;
-    justify-content: space-between;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 3px 10px #cdcdcd;
     font-family: 'Inter', sans-serif;
     padding: 10px;
-
 }
 
 .menu ul{
-    list-style: none;
+    justify-content: flex-end;
     display: flex;
-    justify-content: space-between;
+    list-style: none;
     padding: 5px;
     padding-left: 90px;
     gap: 4rem;
@@ -39,13 +56,13 @@
 }
 
 .menu a:hover{
-    color: var(--rosa_basico_escruto);
+    color: var(--rosa_basico_escuro);
     transform: 0.5s;
 }
 
 .img_menu{
     width: 10%;
-    float: left;
+    margin-left: -65%;
 }
 
 /* botão de pesquisa */
@@ -53,7 +70,7 @@
     background-color: #ffffff00;
     border: 0 none;
     outline: 0;
-    border-bottom: solid 2px #000000;
+    border-bottom: solid 1.8px var(--rosa_sla);
     width: 100%;
 }
 
@@ -74,7 +91,7 @@
   }
 
 .menu .pqs:hover{
-    color: var(--rosa_basico_escruto);
+    color: var(--rosa_basico_escuro);
     transform: 0.5s;
   }
 
@@ -85,6 +102,7 @@
 
 /* fim do botão de pesquisa */
 
+/* MENU RESPONSIVO */
 :root {
     --menu-size: 250px;
 }
@@ -155,9 +173,141 @@
     transition: margin 0.4s;
 }
 
-
-
 /* fim do menu */
+
+
+/* PÁGINA CARRINHO */
+.drt{
+    float: left;
+    width: 50%;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+}
+
+.drt .end{
+    border: 0 none;
+    outline: 0 none;
+    border-bottom: 1.5px solid black;
+    width: 60%;
+}
+
+.drt button{
+    border: 0 none;
+    cursor: pointer;
+    background-color: var(--rosa);
+    width: 30%;
+    height: 45px;
+    border-radius: 15px;
+    margin-top: 5%;
+    transition: background-color .3s;
+    margin-left: 37%;
+}
+
+
+.drt button:hover{
+    background-color: var(--rosa_cinza);
+    transform: .3s;
+}
+
+
+.drt p{
+    font-size: 140%;
+    margin-left: 16%;
+    margin-top: 5%;
+}
+
+.drt .titulo{
+    font-size: 160%;
+    margin-left: 45%;
+    margin-top: 3%;
+}
+
+
+.drt .bb{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.eqd{
+    float: left;
+    width: 50%;
+}
+
+.banner_cpm{
+    background-image: url(fotos/fundo_carrinho2.jpg);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+}
+
+.container_carrinho{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+}
+
+.card_carrinho{
+    margin-top: 24%;
+    margin-bottom: 15.8%;
+    margin-left: 11%;
+    background-color: var(--branco);
+    width: 60%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px #d4d4d4;
+}
+
+.img_card{
+    display: flex;
+    justify-content: space-between;
+}
+.bq{
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 8%;
+    margin-left: 5%;
+    box-shadow: 0px 1px 10px 1px #d4d4d4;
+}
+
+.txt_card{
+    padding-left: 50%;
+    margin-top: -36%;
+}
+/* PÁGINA SOBRE A EMPRESA ------------------------ */
+h2{
+    font-family: 'Inria Serif', serif;  
+    font-weight: 300;
+    font-size: 190%;
+    color: var(--escuro);
+}
+
+.mapa{
+   padding-left: 6%;
+   padding-top: 2%
+}
+
+
+footer{
+    width: 100%;
+    background-color: var(--rosa_sla);
+    text-align: center;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    line-height: 20px;
+    height: 75px;
+}
+
+footer a{
+    padding-left: 20px;
+    text-decoration: none; 
+    color: #ffffff9d;
+    transition: color .2s;
+}
+
+footer a:hover{
+    color: #fff;
+    transform: 2s;
+}
+/* RESPONSIVIDADE ----------------------- */
 
 @media (min-width: 768px) {
     #btnClose {
@@ -165,22 +315,38 @@
     }
 }
 
-
   @media screen and (max-width: 800px){
         .menu{
             display: none;
         }
   }
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 1000px){
     .img_menu{
         display: none;
     }
 }
-@media screen and (min-width: 800px){
-    #btnMenu{
-        display: none;
+    @media screen and (max-width: 1200px){
+        .img_info{
+            display: none;
+        }
     }
-    .menul{
-        display: none;
+    @media screen and (min-width: 800px){
+        #btnMenu{
+            display: none;
+        }
+        .menul{
+            display: none;
+        }
     }
+
+    @media screen and (min-width: 1300px){
+        
+        .img_menu{
+            display: none;
+        }
+    }
+/* DETALHES PARA DEIXAR BONITINHO ------------------ */
+::selection{
+    background-color: var(--rosa_cinza);
+    color: white;
 }
