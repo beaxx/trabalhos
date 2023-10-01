@@ -8,6 +8,8 @@
     --branco: #ffff;
     --escuro: #130303;
     --rosa_sla:#7c6770;
+    --rosa_sla_claro: #887176;
+    --rosa_mt_claro: #ebe5e5;
 }
 
 .material-symbols-outlined {
@@ -284,29 +286,85 @@ h2{
    padding-left: 6%;
    padding-top: 2%
 }
+/* PÁGINA DE CONTA ------------------------- */
 
+.cont_p{
+    background-color: var(--rosa_mt_claro);
+    border: 0 none;
+    width: 28%;
+    height: 40px;
+    border-radius: 20px;
+    outline: 0;
+    padding-left: 12px;
+    font-size: 80%;
+    margin-left: 36%;
+    margin-top: 2.5%;
+}
 
-footer{
-    width: 100%;
-    background-color: var(--rosa_sla);
+.cont_p::placeholder{
+    color: #7c6770a5;
+}
+
+.cont_b{
+    background-color: var(--rosa_cinza);
+    border: 0 none;
+    cursor: pointer;
+    width: 28%;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 36%;
+    margin-top: 2.5%;
+}
+.conti_b{
+    background-color: var(--rosa_mt_claro);
+    border: 0 none;
+    cursor: pointer;
+    width: 28%;
+    height: 42px;
+    border-radius: 20px;
+    margin-left: 36%;
+    margin-top: 2%;
+    text-align: left;
+    padding-left: 12px;
+}
+
+/* FOOTER ---------- */
+
+footer {
+    position: absolute;
+    background-color: var(--rosa_sla_claro);
+    width: 100%;   
+    line-height: 25px;
+    font-family: 'Inter', sans-serif; 
     text-align: center;
-    padding: 10px;
-    font-family: 'Inter', sans-serif;
-    line-height: 20px;
-    height: 75px;
+}
+
+footer i{
+    color: hsla(0, 0%, 100%, 0.495);
+    font-size: 100%;
+    transition:color .5s;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+footer i:hover{
+    color: #FFF;
 }
 
 footer a{
-    padding-left: 20px;
-    text-decoration: none; 
-    color: #ffffff9d;
-    transition: color .2s;
+    color: hsla(0, 0%, 100%, 0.495);
+    font-size: 110%;
+    text-decoration: none;
+    transition: color 0.5s;
+    padding-left: 15px;
 }
 
 footer a:hover{
-    color: #fff;
-    transform: 2s;
+    color: #FFF;
+    transform: 0.5s;
 }
+
 /* RESPONSIVIDADE ----------------------- */
 
 @media (min-width: 768px) {
