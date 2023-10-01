@@ -10,6 +10,7 @@
     --rosa_sla:#7c6770;
     --rosa_sla_claro: #887176;
     --rosa_mt_claro: #ebe5e5;
+    --rosa_estranho: #baa9a9;
 }
 
 .material-symbols-outlined {
@@ -314,7 +315,13 @@ h2{
     border-radius: 20px;
     margin-left: 36%;
     margin-top: 2.5%;
+    transition: background-color 1s;
 }
+.cont_b:hover{
+    background-color: var(--rosa_sla_claro);
+    transform: 1s;
+}
+
 .conti_b{
     background-color: var(--rosa_mt_claro);
     border: 0 none;
@@ -328,11 +335,14 @@ h2{
     padding-left: 12px;
 }
 
+
+/* PÁGINA DE CADASTRO ------------------- */
+
 /* FOOTER ---------- */
 
 footer {
     position: absolute;
-    background-color: var(--rosa_sla_claro);
+    background-color: var(--rosa_estranho);
     width: 100%;   
     line-height: 25px;
     font-family: 'Inter', sans-serif; 
@@ -341,15 +351,23 @@ footer {
 
 footer i{
     color: hsla(0, 0%, 100%, 0.495);
-    font-size: 100%;
+    font-size: 110%;
     transition:color .5s;
     cursor: pointer;
-    margin-left: 3%;
-    margin-top: 2%;
+    float: left;
+    padding-left: 30px;
+    margin-top: 1%;
 }
 
 footer i:hover{
     color: #FFF;
+}
+
+footer ul{
+    margin-right: 3%;
+    float: right;
+    list-style: none;
+    text-align: right;
 }
 
 footer a{
@@ -363,6 +381,18 @@ footer a{
 footer a:hover{
     color: #FFF;
     transform: 0.5s;
+}
+
+footer p{
+    float: left;
+    margin-left: 2.5%;
+}
+
+.line{
+    width: 100%;
+    border: 1px solid #fff;
+    margin-top: 10px;
+    margin-bottom: 8px;
 }
 
 /* RESPONSIVIDADE ----------------------- */
