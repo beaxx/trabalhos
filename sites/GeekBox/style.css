@@ -71,6 +71,7 @@ main{
     justify-content: space-between;
     display: flex;
     padding: 5px;
+    width: 100%;
 }
 
 .menu ul{
@@ -230,3 +231,138 @@ main{
         border: solid 1px #ffff;
         margin-bottom: 1%;
     }
+
+
+
+
+    
+    #login {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        height: 100vh;
+
+        font-family: 'Roboto Mono', monospace;
+
+}
+
+.card {
+
+background-color: rgba(19, 19, 19, 0.3);
+
+padding: 40px;
+
+border-radius: 2px;
+
+width:280px;
+margin-top: -100px;
+margin-left: 90px;
+
+}
+
+.card-header {
+
+padding-bottom: 20px;
+
+opacity: 0.8;
+
+color: #fff;
+
+}
+
+.card-content label {
+
+color: #fff;
+
+font-size: 12px;
+
+opacity: 0.8;
+
+}
+
+.card-content-area {
+
+display: flex;
+
+flex-direction: column;
+
+padding:10px 0;
+
+}
+
+.card-content-area input {
+
+margin-top: 10px;
+
+padding:0 5px;
+
+background-color: transparent;
+
+border:none;
+
+border-bottom: 1px solid #e1e1e1;
+
+outline: none;
+
+color: #fff;
+
+}
+
+.card-footer {
+
+display: flex;
+
+flex-direction: column;
+
+}
+
+
+.card-footer a {
+
+text-align: center;
+
+font-size: 12px;
+
+opacity: 0.8;
+
+color: #fff;
+
+text-decoration: none;
+
+}
+
+.card-footer button{
+    background-color: #732ca3;
+    border: 0;
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.card-footer button:hover{
+    background-color: #561880;
+    transform: .3s;
+}
+
+.parte_login{
+    width: 50%;
+    float: left;
+}
+
+.pa{
+    color: rgb(124, 124, 124);
+    transition: color .2s;
+}
+
+.pa:hover{
+    color: #fff;
+    transform: 2s;
+}
