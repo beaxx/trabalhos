@@ -26,6 +26,10 @@
     padding: 0;
 }
 
+body{
+    background-color: #fff;
+}
+
 main{
     margin: auto;
     max-width: 1280px;
@@ -174,41 +178,19 @@ main{
     transition: margin 0.4s;
 }
 
-/* fim do menu */
 
+h2{
+    font-family: 'Inria Serif', serif;  
+    font-weight: 300;
+    font-size: 190%;
+    color: var(--escuro);
+}
 
-    .banner{
-        background-image: url(fotos/Untitled.jpg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
+.mapa{
+   padding-left: 6%;
+   padding-top: 2%
+}
 
-    .banner h2{
-        font-size: 500%;
-        color: var(--branco);
-        padding-top: 8%;
-        text-align: center;
-        padding-bottom: 1%;
-        text-shadow: 1px 4px 8px var(--escuro);
-    }
-
-    .line{
-        width: 12%;
-        border: 1.5px solid var(--branco);
-        margin: auto;
-    }
-
-    .banner p{
-        font-family: 'Inter', sans-serif;
-        color: var(--branco);
-        font-weight: 600;
-        font-size: 170%;
-        padding-bottom: 10%;
-        padding-top: 1.5%;
-        text-align: center;
-        text-shadow: 1px 4px 8px var(--escuro);
-    }
-/* RESPONSIVIDADE ----------------------- */
 
 @media (min-width: 768px) {
     #btnClose {

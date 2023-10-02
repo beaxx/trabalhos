@@ -176,39 +176,52 @@ main{
 
 /* fim do menu */
 
+.cont_p{
+    background-color: var(--rosa_mt_claro);
+    border: 0 none;
+    width: 28%;
+    height: 40px;
+    border-radius: 20px;
+    outline: 0;
+    padding-left: 12px;
+    font-size: 80%;
+    margin-left: 36%;
+    margin-top: 2.5%;
+}
 
-    .banner{
-        background-image: url(fotos/Untitled.jpg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
+.cont_p::placeholder{
+    color: #7c6770a5;
+}
 
-    .banner h2{
-        font-size: 500%;
-        color: var(--branco);
-        padding-top: 8%;
-        text-align: center;
-        padding-bottom: 1%;
-        text-shadow: 1px 4px 8px var(--escuro);
-    }
+.cont_b{
+    background-color: var(--rosa_cinza);
+    border: 0 none;
+    cursor: pointer;
+    width: 29%;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 36%;
+    margin-top: 2.5%;
+    transition: background-color 1s;
+}
+.cont_b:hover{
+    background-color: var(--rosa_sla_claro);
+    transform: 1s;
+}
 
-    .line{
-        width: 12%;
-        border: 1.5px solid var(--branco);
-        margin: auto;
-    }
+.conti_b{
+    background-color: var(--rosa_mt_claro);
+    border: 0 none;
+    cursor: pointer;
+    width: 29%;
+    height: 42px;
+    border-radius: 20px;
+    margin-left: 36%;
+    margin-top: 2%;
+    text-align: left;
+    padding-left: 12px;
+}
 
-    .banner p{
-        font-family: 'Inter', sans-serif;
-        color: var(--branco);
-        font-weight: 600;
-        font-size: 170%;
-        padding-bottom: 10%;
-        padding-top: 1.5%;
-        text-align: center;
-        text-shadow: 1px 4px 8px var(--escuro);
-    }
-/* RESPONSIVIDADE ----------------------- */
 
 @media (min-width: 768px) {
     #btnClose {
