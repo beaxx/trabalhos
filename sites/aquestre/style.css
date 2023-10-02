@@ -339,62 +339,15 @@ h2{
 /* PÁGINA DE CADASTRO ------------------- */
 
 /* FOOTER ---------- */
-
 footer {
-    position: absolute;
-    background-color: var(--rosa_estranho);
-    width: 100%;   
-    line-height: 25px;
-    font-family: 'Inter', sans-serif; 
     text-align: center;
-}
-
-footer i{
-    color: hsla(0, 0%, 100%, 0.495);
-    font-size: 110%;
-    transition:color .5s;
-    cursor: pointer;
-    float: left;
-    padding-left: 30px;
-    margin-top: 1%;
-}
-
-footer i:hover{
-    color: #FFF;
-}
-
-footer ul{
-    margin-right: 3%;
-    float: right;
-    list-style: none;
-    text-align: right;
-}
-
-footer a{
-    color: hsla(0, 0%, 100%, 0.495);
-    font-size: 110%;
-    text-decoration: none;
-    transition: color 0.5s;
-    padding-left: 15px;
-}
-
-footer a:hover{
-    color: #FFF;
-    transform: 0.5s;
-}
-
-footer p{
-    float: left;
-    margin-left: 2.5%;
-}
-
-.line{
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white;
+    bottom: 0;
+    position: absolute;
     width: 100%;
-    border: 1px solid #fff;
-    margin-top: 10px;
-    margin-bottom: 8px;
-}
-
+  }
 /* RESPONSIVIDADE ----------------------- */
 
 @media (min-width: 768px) {
