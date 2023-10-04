@@ -24,6 +24,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -34,6 +35,7 @@ main{
     margin: auto;
     max-width: 1280px;
     min-width: none;
+    display: flex;
 }
 /*   menu  */
 .menu{
@@ -180,11 +182,17 @@ main{
 
 
 /* PÁGINA CARRINHO */
+
+
 .drt{
-    float: left;
     width: 50%;
+    float: left;
     font-family: 'Inter', sans-serif;
-    background-color: #fff;
+}
+
+.eqd{
+  width: 50%;
+  float: left;
 }
 
 .drt .end{
@@ -229,11 +237,6 @@ main{
 .drt .bb{
     margin-left: 20%;
     margin-top: 5%;
-}
-
-.eqd{
-    float: left;
-    width: 50%;
 }
 
 .banner_cpm{
@@ -312,6 +315,7 @@ main{
         .img_menu{
             display: none;
         }
+
     }
 /* DETALHES PARA DEIXAR BONITINHO ------------------ */
 ::selection{
