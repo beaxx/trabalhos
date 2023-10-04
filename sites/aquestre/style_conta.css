@@ -259,6 +259,30 @@ main{
             display: none;
         }
     }
+    @media screen and (max-width: 650px){
+        .cont_p{
+            font-size: 70%;
+        }
+
+    }
+    @media screen and (max-width: 700px){
+        .conti_b{
+            font-size: 70%;
+        }
+    }
+    @media screen and (max-width: 590px){
+        .conti_b{
+            font-size: 60%;
+        }
+    }
+    @media screen and (max-width: 500px){
+        .cont_p{
+            font-size: 60%;
+        }
+        .conti_b{
+            font-size: 55%;
+        }
+    }
 /* DETALHES PARA DEIXAR BONITINHO ------------------ */
 ::selection{
     background-color: var(--rosa_cinza);

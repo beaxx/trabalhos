@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+
 
 :root{
     --rosa_basico_escuro: rgb(163, 89, 89);
@@ -24,6 +27,11 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
 }
 
 main{
@@ -34,6 +42,7 @@ main{
 /*   menu  */
 .menu{
     max-width: 100%;    
+    height: 63px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 3px 10px #cdcdcd;
     font-family: 'Inter', sans-serif;
@@ -173,10 +182,6 @@ main{
 .effect {
     transition: margin 0.4s;
 }
-
-/* fim do menu */
-
-
     .banner{
         background-image: url(fotos/Untitled.jpg);
         background-size: 100%;
@@ -190,6 +195,8 @@ main{
         text-align: center;
         padding-bottom: 1%;
         text-shadow: 1px 4px 8px var(--escuro);
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
     }
 
     .line{
@@ -319,6 +326,85 @@ main{
     float: left;
  }
  
+
+ /* GAMBIARRA - RESPONSIVIDADE DA HOMEPAGE */
+ .drt1{
+    width: 60%;
+    margin: auto;
+}
+.eqd1{
+   width: 100%;
+   display: flex;
+}
+
+
+.drt1 h2{
+    text-align: center;
+    font-family: 'Inria Serif', serif;  
+}
+.sla h2{
+    text-align: center;
+    font-family: 'Inria Serif', serif;  
+}
+
+.container_carrinho1{
+font-family: 'Inter', sans-serif;
+}
+
+.card_carrinho1{
+margin: auto;
+background-color: var(--rosa_mt_claro);
+width: 70%;
+height: 200px;
+border-radius: 10px;
+
+}
+
+.img_card1{
+display: flex;
+justify-content: space-between;
+}
+.bq1{
+width: 36%;
+border-radius: 10px;
+margin-top: 6%;
+margin-left: 5%;
+background-color: var(--rosa_sla);
+padding: 1.5px;
+}
+
+.txt_card1{
+padding-left: 46%;
+margin-top: -33%;
+}
+.txt_card1 a{
+color: var(--escuro);
+float: right;
+padding-top: 16%;
+padding-right: 30px;
+transition: color 0.8s;
+}
+.txt_card1 a:hover{
+color:var(--rosa_basico_escuro);
+transform: 0.8s;
+}
+
+.txt_card3{
+padding-left: 46%;
+margin-top: -35%;
+}
+.txt_card3 a{
+color: var(--escuro);
+float: right;
+padding-right: 30px;
+padding-top: 18%;
+transition: color 0.8s;
+}
+.txt_card3 a:hover{
+color:var(--rosa_basico_escuro);
+transform: 0.8s;
+}
+
 /* RESPONSIVIDADE ----------------------- */
 
 @media (min-width: 768px) {
@@ -358,6 +444,66 @@ main{
         }
   
     }
+    @media screen and (max-width: 1000px){
+            main{
+                display: none;
+            }
+    }
+    @media screen and (min-width: 1000px){
+        .sla{
+            display: none;
+        }
+}
+    @media screen and (max-width: 800px){
+        .txt_card1 a{
+           float: left;
+           padding-top: 8%;
+        }
+        .txt_card3 a{
+            float: left;
+            padding-top: 25%;
+            padding-right: 30px;
+            transition: color 0.8s;
+         }
+        }
+        @media screen and (max-width: 600px){
+            .bq1{
+                display: none;
+            }
+            .txt_card1 h5{
+                font-size: 90%;
+            }
+            .txt_card1 {
+                font-size: 80%;
+                padding-left: 15%;
+                margin-top: 10px;
+                padding-right: 10px;
+            }
+            .txt_card3 h5{
+                font-size: 90%;
+            }
+            .txt_card3 {
+                font-size: 80%;
+                padding-left: 15%;
+                margin-top: 10px;
+                padding-right: 10px;
+            }
+            .card_carrinho1{
+                width: 90%;
+                height: 100%;
+                cursor: pointer;
+            }
+            .txt_card1 a{
+             display: none;
+             }
+             .txt_card3 a{
+                display: none;
+                }
+             .eqd1{
+                display: flex;
+                justify-content: space-evenly;
+             }
+        }
 /* DETALHES PARA DEIXAR BONITINHO ------------------ */
 ::selection{
     background-color: var(--rosa_cinza);

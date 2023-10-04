@@ -280,6 +280,96 @@ main{
 }
 
 
+
+.drt1{
+    font-family: 'Inter', sans-serif;
+}
+
+.drt1 .end{
+    border: 0 none;
+    outline: 0 none;
+    border-bottom: 1.5px solid black;
+    width: 60%;
+}
+
+.drt1 button{
+    border: 0 none;
+    cursor: pointer;
+    background-color: var(--rosa);
+    width: 30%;
+    height: 45px;
+    border-radius: 15px;
+    margin-top: 5%;
+    transition: background-color .3s;
+    margin-left: 37%;
+}
+
+
+.drt1 button:hover{
+    background-color: var(--rosa_cinza);
+    transform: .3s;
+}
+
+
+.drt1 p{
+    font-size: 140%;
+    margin-left: 16%;
+    margin-top: 5%;
+}
+
+.drt1 .titulo{
+    font-size: 160%;
+    margin-left: 45%;
+    margin-top: 3%;
+}
+
+
+.drt1 .bb{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.banner_cpm1{
+    background-image: url(fotos/fundo_carrinho.jpg);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+}
+
+.container_carrinho1{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+}
+
+.card_carrinho1{
+    margin-top: 10%;
+    margin-bottom: 15%;
+    margin-left: 20%;
+    background-color: var(--branco);
+    width: 60%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px #d4d4d4;
+}
+
+.img_card1{
+    display: flex;
+    justify-content: space-between;
+}
+.bq1{
+    width: 20%;
+    border-radius: 10px;
+    margin-top: 4%;
+    margin-left: 5%;
+    box-shadow: 0px 1px 10px 1px #d4d4d4;
+}
+
+.txt_card1{
+    padding-left: 30%;
+    margin-top: -16%;
+}
+
+
 @media (min-width: 768px) {
     #btnClose {
         display: none;
@@ -317,6 +407,27 @@ main{
         }
 
     }
+    @media screen and (max-width: 800px){
+        .bq1{
+            display: none;
+        }
+        
+        .txt_card1{
+        padding-left: 10%;
+        margin-top: 10%;
+        }
+    }
+    @media screen and (min-width: 900px){
+        .sla{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 900px){
+        main{
+            display: none;
+        }
+    }
+    
 /* DETALHES PARA DEIXAR BONITINHO ------------------ */
 ::selection{
     background-color: var(--rosa_cinza);
