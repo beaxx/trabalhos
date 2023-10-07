@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
     <title>Calculadora</title>
     <style>
         *{
@@ -57,11 +58,17 @@ main{
     text-align: right;
     padding: 5px;
 }
+::selection{
+      background-color: var(--roxin);
+      color: #fff;
+    }
     </style>
 </head>
 <body>
     <main>
-    <div class="fundo">
+       
+    <div class="fundo"> <br>
+        <a href="index.html" class="seta"><i class="fa-solid fa-arrow-left"></i></a>
         <div class="calculadora">
             <h2 style="color: rgb(22, 21, 21);">☆*:｡calculadora｡:*☆</i></h2>
             <p id="resultado"></p>
