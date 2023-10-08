@@ -86,7 +86,9 @@
     }
     .cards{
       display: flex;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      gap:50px;
+      justify-content: center;
     }
     .cards .btn + .btn {
     margin-left: 25px;
@@ -102,6 +104,41 @@
       background-color: #bcbcbc;
       color: #fff;
     }
+
+  .cats{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.cats p{
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+}
+.drt {
+  flex: 30%;
+  width: 10%;
+  padding-left: 30px;
+}
+
+.eqd{
+  flex: 30%;
+  width: 10%;
+  padding-left: 30px;
+}
+.meio{
+  flex: 30%;
+  width: 10%;
+  padding-left: 30px;
+}
+
+@media (max-width: 800px) {
+  .eqd, .drt {
+    flex: 100%;
+  }
+}
   </style>
 </head>
 <body>
@@ -165,10 +202,12 @@
 </div>
 </div>
 <br><br>
+<h2 style="text-align: center;">Dê uma olhada nas outras áreas</h2>
+<br>
 <div class="cats">
-  <h2 style="text-align: center;">Dê uma olhada nas outras categorias</h2>
-  <br>
-  <img src="fotos/google.webp">
+ <div class="eqd"> <a href="#"><img src="fotos/bckend.jpg"  style="border-radius: 200px;" width="100%"></a><p>Backend</p></div>
+  <div class="meio"><a href="#"><img src="fotos/ac.jpg" style="border-radius: 200px;" width="100%"></a><p>Acessórios</p></div>
+  <div class="drt"><a href="extensoes.html"><img src="fotos/google.jpg"  style="border-radius: 200px;" width="100%"></a><p>Extensões</p></div> 
 </div>
 </main>
 </body>
