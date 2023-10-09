@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="fotos/games-png-new-svg-image-2000.png">
+  <title>código</title>
+  <style>
+     :root{
+      --escuro:#232125;
+      --roxin: rgb(58, 40, 73);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        max-width: 1280px;
+        min-width: none;
+        margin: auto;
+    }
+    textarea{
+        background-color: #232020;
+        color: #fff;
+        margin: 2% 20%;
+        }
+        ::selection{
+      background-color: var(--roxin);
+      color: #fff;
+    }
+    .seta{
+        margin-left: 5%;
+    }
+  </style> 
+</head>
+  <body>
+    <main>
+        <br>
+        <a href="backend.html" class="seta"><i class="fa-solid fa-arrow-left"></i></a>
+    <h2 style="text-align: center;">O CÓDIGO: </h2>
+<textarea readonly rows='30' cols='100'>
+opcao_do_menu = 0
+
+def menu():
+  print(20*"-")
+  print("1 - Nova tarefa")
+  print("2 - Ver tarefas")
+  print("3 - Excluir tarefa salva")
+  print("4 - Sair")
+  print(20*"-")
+
+menu()
+lista_de_tarefas = []
+opcao_do_menu = int(input("\nDigite o número da opção desejada: "))
+
+while True:
+  if opcao_do_menu == 1:
+    print("Opção escolhida: 1 - Incluir nova tarefa")
+    opcao_do_menu = 0
+    tarefa = input("Digite tarefa a ser adicionada: ")
+    lista_de_tarefas.append(tarefa)
+    print("\nSua lista de tarefas")
+    print(lista_de_tarefas)
+    print("\n")
+    menu()
+    opcao_do_menu = int(input("\nDigite o número da opção desejada: "))
+
+  elif opcao_do_menu == 2:
+    print("Opção escolhida: 2 - Ver lista de tarefas")
+    print("\nSua lista de tarefas: ")
+    print(lista_de_tarefas)
+    print("\n")
+    opcao_do_menu = 0
+    menu()
+    opcao_do_menu = int(input("\nDigite o número da opção desejada: "))
+
+  elif opcao_do_menu == 3:
+    print("Opção escolhida: 3 - Excluir tarefa salva")
+    print("\nSua lista de tarefas: ")
+    print(lista_de_tarefas)
+    print("\n")
+    tarefa_a_ser_removida = input("Digite a tarefa a ser removida: ")
+    lista_de_tarefas.remove(tarefa_a_ser_removida)
+    print("\nSua Lista de tarefas: ")
+    print(lista_de_tarefas)
+    print("\n")
+    opcao_do_menu = 0
+    menu()
+    opcao_do_menu = int(input("\nDigite o número da opção desejada: "))
+
+  elif opcao_do_menu == 4:
+    print("Opçaõ escolhida: 4 - Sair")
+    resposta_de_saida = input("Deseja mesmo sair? (S/N) ").upper()
+    if (resposta_de_saida == "S") or (resposta_de_saida == "SIM"):
+      break
+    else:
+      print("\n")
+      menu()
+      opcao_do_menu = 0
+      opcao_do_menu = int(input("\nDigite o número da opção desejada: "))
+    </textarea>
+</main>
+</body>
+</html>

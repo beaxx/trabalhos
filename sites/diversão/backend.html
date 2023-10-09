@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="icon" href="fotos/games-png-new-svg-image-2000.png">
+  <title>Backend</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    :root{
+      --escuro:#232125;
+      --roxin: rgb(58, 40, 73);
+    }
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background-color: #232125;
+    }
+    main{
+      max-width: 1280px;
+      min-width: none;
+      margin: auto;
+    }
+    header .btn{
+      background-color: transparent;
+      color: #fff;
+      border: 0 none;
+    }
+    header .btn:hover{
+      background-color: transparent;
+      color: #fff;
+    }
+  
+    ::selection{
+      background-color: var(--roxin);
+      color: #fff;
+    }
+    .dropdown-menu{
+      font-family: 'Roboto Mono', monospace;
+    }
+    .dropdown-menu a:hover{
+      background-color: #bcbcbc;
+      color: #fff;
+    }
+    header{
+        background-color: #0d0910;
+        color: #ffffffde;
+        text-align: center;
+    }
+    header h2{
+        font-family: 'Pixelify Sans', cursive;
+        margin-top: 5%;
+    }
+    header p{ 
+        font-family: 'Roboto Mono', monospace;
+        padding-bottom: 5%;
+    }
+.line{
+    width: 30%;
+    border: 1px solid #ffffffe7;
+    margin: auto;
+    margin-bottom: 1%;
+}
+.row{
+    width: 90%;
+    margin: auto;
+}
+.cards{
+      display: flex;
+      justify-content: space-around;
+    }
+    h2{
+        color: #fff;
+        text-align: center;
+        font-family: 'Pixelify Sans', cursive;
+    }
+    .card .btn{
+      background-color: #40304e;
+      border: #1e032d;
+    }
+    .cats{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.cats p{
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+}
+.drt {
+  flex: 30%;
+  width: 10%;
+  padding-left: 30px;
+}
+
+.eqd{
+  flex: 30%;
+  width: 10%;
+  padding-left: 30px;
+}
+.meio{
+  flex: 30%;
+  width: 10%;
+  padding-left: 30px;
+}
+
+.cards{
+      display: flex;
+      flex-wrap: wrap;
+      gap:50px;
+      justify-content: center;
+    }
+    
+@media (max-width: 800px) {
+  .eqd, .drt {
+    flex: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+  <main>
+  <header>
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="creditos.html">creditos</a></li>
+      <li><a class="dropdown-item" href="backend.html">back-end</a></li>
+      <li><a class="dropdown-item" href="extensoes.html">extensões</a></li>
+      <li><a class="dropdown-item" href="ac.html">acessórios</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="index.html">homepage</a></li>
+    </ul>
+</div>
+<h2>TEMOS BACK-END AQUI TAMBÉM!</h2>
+<div class="line"></div>
+<p>Backend pode ser <b>divertido</b>! Venha ver alguns códigos interessantes.</p>
+  </header>
+  <br>
+  <h2>CÓDIGOS SIMPLES DE BACKEND</h2>
+  <br>
+  <div class="cards">
+    <div class="card" style="width: 18rem;">
+      <img src="fotos/pexels-hitesh-choudhary-879109.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pedra, papel ou tesoura</h5>
+        <p class="card-text">Um clássico não é? Aprenda a como fazer esse jogo e jogue contra o bot!</p>
+        <a href="ppt.html" class="btn btn-primary">ver o código</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="fotos/pexels-markus-spiske-1921326.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">jogo da velha</h5>
+        <p class="card-text">Faça em PYTHON, um jogo da velha e jogue com seus amigos! Simples, fácil e legal
+        </p>
+        <a href="jv.html" class="btn btn-primary">ver o código</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="fotos/pexels-jorge-jesus-614117.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">lista de tarefa</h5>
+        <p class="card-text">Aqui você faz em python um lugar para armazenar e modificar suas tarefas
+        </p>
+        <a href="lt.html" class="btn btn-primary">ver o código</a>
+      </div>
+    </div>
+    </div>
+    <br><br>
+    <h2>POR QUE SER BACKEND?</h2>
+    <div class="line"></div>
+    <br>
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Benefícios</h5>
+              <p class="card-text">Por que começar a fazer backend? Quais os benefícios dessa área?</p>
+              <a href="b.html" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Programas e linguagens</h5>
+              <p class="card-text">O que se usa em backend? Quais as linguagens?Venha ver!</p>
+              <a href="p.html" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<br><br>
+<h2 style="text-align: center;">Dê uma olhada nas outras áreas</h2>
+<br>
+<div class="cats">
+ <div class="eqd"> <a href="index.html"><img src="fotos/bckend.jpg"  style="border-radius: 200px;" width="100%"></a><p>Frontend</p></div>
+  <div class="meio"><a href="ac.html"><img src="fotos/ac.jpg" style="border-radius: 200px;" width="100%"></a><p>Acessórios</p></div>
+  <div class="drt"><a href="extensoes.html"><img src="fotos/google.jpg"  style="border-radius: 200px;" width="100%"></a><p>Extensões</p></div> 
+</div>
+</main>
+</body>
+</html>
