@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="imagex/png" href="fotos/logo_GeekBox-removebg-preview.png">
+    <script href="script.js"></script>
     <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
     <title>GeekBox</title>
 </head>
@@ -13,12 +13,29 @@
         <ul>
             <ul><div class="img_menu"><img src="fotos/logo_GeekBox-removebg-preview.png" width="8%"></div></ul>
             <div class="pe"><input type="text" class="pqp" placeholder="Pesquisar itens" itens><i class="fa-solid fa-magnifying-glass"></i></div>
-            <li><a href="#">navegar</a></li>
+            <li><a href="index.html">navegar</a></li>
             <li><a href="#">descobrir</a></li>
             <li><a href="#">suporte</a></li>
             <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </nav>
+    <div id="menu">
+      <div id="menu-bar" onclick="menuOnClick()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="index.html">navegar</a></li>
+          <li><a href="#">descobrir</a></li>
+          <li><a href="#">suporte</a></li>
+          <li><a href="#">conta</a></li>
+        </ul>
+      </nav> 
+    </div>
+    
+    <div class="menu-bg" id="menu-bg"></div>
     <main>
         <section class="container">
             <div class="slider_wrapper">
@@ -36,49 +53,49 @@
                 </div>
             </div> 
         </section>
-        <h1 style="margin-left: 4%; font-family: 'Roboto Mono', monospace; color: #fff; font-weight: 400;">MAIS VENDIDOS</h1>
-        <div class="jogos">
-                <div class="card_carrinho">
-                    <div class="img_card">
-                        <img src="fotos/cuphead.jpeg" class="ch" alt="cuphead" width="80%">
-                    </div>
-                    <div class="txt_card">
-                        <h4>JOGO</h4>
-                        <p>Cuphead</p>
-                        <p>R$22,90</p>
-                    </div>
-                </div>
-                <div class="card_carrinho">
-                    <div class="img_card">
-                        <img src="fotos/sally.jpg" width="80%" class="ch" alt="sally face">
-                    </div>
-                    <div class="txt_card">
-                        <h4>JOGO</h4>
-                        <p>Sally Face</p>
-                        <p>R$74,00</p>
-                    </div>
-                </div>
-                <div class="card_carrinho">
-                    <div class="img_card">
-                        <img src="fotos/undertale.jpg" width="80%" class="ch" alt="undertale">
-                    </div>
-                    <div class="txt_card">
-                        <h4>JOGO</h4>
-                        <p>undertale</p>
-                        <p>R$20,00</p>
-                    </div>
-                </div>
-                <div class="card_carrinho">
-                    <div class="img_card">
-                        <img src="fotos/alice.jpg" width="80%" class="ch" alt="alice in madness return">
-                    </div>
-                    <div class="txt_card">
-                        <h4>JOGO</h4>
-                        <p>Alice in madness</p>
-                        <p>R$14,50</p>
-                    </div>
-                </div>
+        <div class="img_a">
+        <img src="fotos/geekbox2.png">
+      </div> 
+      <h1 style="margin-left: 1%; font-family: 'Roboto Mono', monospace; color: #fff; font-weight: 400;">ENCONTRE POR GÊNERO</h1>
+      <div class="cats">
+        <a href="#" class="si"><img src="fotos/sims2.jpg"></a>
+        <a href="#" class="te"><img src="fotos/psychiatric-8128531_12802.jpg"></a>
+        <a href="#" class="pl"><img src="fotos/mario2.jpg"></a>
+        <a href="#" class="in"><img src="fotos/hk2.jpg" ></a>
+        <a href="#" class="rpg"><img src="fotos/water-3350331_12802.jpg" ></a>
+      </div>
+      <br><br>
+        <h1 style="margin-left: 1%; font-family: 'Roboto Mono', monospace; color: #fff; font-weight: 400;">MAIS VENDIDOS</h1>
+        <div class="cards_jogos">
+        <div class="card2">
+            <img src="fotos/sally.jpg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
+            <div class="container2">
+              <h4><b>Sally Face</b></h4>
+              <p>R$70,90</p>
             </div>
+          </div>
+          <div class="card3">
+            <img src="fotos/cuphead.jpeg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
+            <div class="container2">
+              <h4><b>CupHead</b></h4>
+              <p>R$45,00</p>
+            </div>
+          </div>
+          <div class="card4">
+            <img src="fotos/alice.jpg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
+            <div class="container2">
+              <h4><b>Alice </b></h4>
+              <p>R$12,90</p>
+            </div>
+          </div>
+          <div class="card5">
+            <img src="fotos/undertale.jpg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
+            <div class="container2">
+              <h4><b>Undertale </b></h4>
+              <p>R$20,00</p>
+            </div>
+          </div>
+        </div>
   </main> 
   <br><br>
   <footer>
@@ -93,5 +110,12 @@
             <a href="#" class="txt">Cookies</a>
         <a class="txtde">Copyright © 2023,<b>GeekBox.</b> </a>
 </footer>   
+<script>
+  function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+</script>
 </body>
 </html>
