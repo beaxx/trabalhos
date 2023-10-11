@@ -181,65 +181,6 @@ main{
     max-width: 1280px;
     min-width: none;
 }
-.container{
-    margin-top: 5px;
-    padding: 2rem;
-}
-.slider_wrapper{
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-    
-}
-
-.slider{
-    display: flex;
-    aspect-ratio: 16/9;
-    overflow-x: hidden; 
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5;
-    border-radius: 30px;
-}
-
-.slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: center;
-    object-fit: cover;
-}
-
-.slider_nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.slider_nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
-}
-
-.slider_nav a:hover{
-    opacity: 1;
-}
-
-.card_carrinho{
-    background-color: #252323;
-    width: 20%;
-    height: 400px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 15px 1px #2a2a2a;
-}
-
 .img_card{
     display: flex;
     justify-content: space-between;
@@ -324,180 +265,6 @@ main{
     footer .txt:hover{
         color: #FFF;
     }
-    
-    .line{
-        max-width: 100%;
-        border: solid 1.5px hsla(0, 0%, 100%, 0.495);;
-        margin-bottom: 1%;
-    }
-    
-    #login {
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        height: 100vh;
-
-        font-family: 'Roboto Mono', monospace;
-
-}
-
-.card1 {
-
-background-color: rgba(19, 19, 19, 0.3);
-
-padding: 40px;
-
-border-radius: 2px;
-
-width:280px;
-margin-top: -100px;
-margin-left: 90px;
-
-}
-
-.card-header {
-
-padding-bottom: 20px;
-
-opacity: 0.8;
-
-color: #fff;
-
-}
-
-.card-content label {
-
-color: #fff;
-
-font-size: 12px;
-
-opacity: 0.8;
-
-}
-
-.card-content-area {
-
-display: flex;
-
-flex-direction: column;
-
-padding:10px 0;
-
-}
-
-.card-content-area input {
-
-margin-top: 10px;
-
-padding:0 5px;
-
-background-color: transparent;
-
-border:none;
-
-border-bottom: 1px solid #e1e1e1;
-
-outline: none;
-
-color: #fff;
-
-}
-
-.card-footer {
-
-display: flex;
-
-flex-direction: column;
-
-}
-
-
-.card-footer a {
-
-text-align: center;
-
-font-size: 12px;
-
-opacity: 0.8;
-
-color: #fff;
-
-text-decoration: none;
-
-}
-
-.card-footer button{
-    background-color: #732ca3;
-    border: 0;
-    color: #fff;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color .3s;
-}
-
-.card-footer button:hover{
-    background-color: #561880;
-    transform: .3s;
-}
-
-.parte_login{
-    width: 50%;
-    float: left;
-}
-
-.pa{
-    color: rgb(124, 124, 124);
-    transition: color .2s;
-}
-
-.pa:hover{
-    color: #fff;
-    transform: 2s;
-}
-
-  .card2, .card3, .card4, .card5 {
-    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
-    transition: 0.3s;
-    background-color: #252323;
-    width: 200px;
-    height: 300px;
-    font-family: 'Inter', sans-serif;
-    color: #fff;
-    cursor: pointer;
-  }
-  .card2:hover , .card3:hover, .card4:hover , .card5:hover {
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .container2 {
-    padding: 2px 16px;
-  }
-
-  .card2 img , .card3 img {
-    border-radius: 5px 5px 5px 5px;
-  }
-  .cards_jogos{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1.5%;
-    margin-left: 6%;
-    justify-content: center;
-    gap:50px;
-    width: 90%;
-    
-}
-
-.img_a img{
-    width: 100%;
-}
 /* RESPONSIVO */
 @media (max-width: 768px) {
     h1{
@@ -511,20 +278,8 @@ text-decoration: none;
     }
 }
 @media(min-width: 768px){
-    .img_a{
-        display: none;
-    }
 }
 @media (max-width: 800px) {
-    .card_carrinho1, .card_carrinho, .card_carrinho3, .card_carrinho4{
-      flex: 100%;
-    }
-    .te, .rpg, .in, .pl{
-        display: none;
-    }
-    .h1d{
-        display: none;
-    }
 }
 @media(min-width: 1200px){
     #menu{
@@ -542,34 +297,6 @@ text-decoration: none;
     color: #fff;
 }
 
-.cats{
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-top: 1.5%;
-    width: 80%;
-    justify-content:center ;
-    margin-left: 13%;
-}
-.te, .rpg, .in, .pl{
-    flex: 10%;
-
-        text-decoration: none;
-}
-
-.cats p{
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Roboto Mono', monospace;
-
-}
-.cats img{
-    width: 75%;
-    border-radius: 40px;
-}
-.si:hover , .te:hover, .rpg:hover, .in:hover, .pl:hover{
-    transform: scale(1.1);
-}
     </style>
 </head>
 <body>
@@ -579,7 +306,7 @@ text-decoration: none;
             <div class="pe"><input type="text" class="pqp" placeholder="Pesquisar itens" itens><i class="fa-solid fa-magnifying-glass"></i></div>
             <li><a href="index.html">navegar</a></li>
             <li><a href="#">descobrir</a></li>
-            <li><a href="suporte.html">suporte</a></li>
+            <li><a href="#">suporte</a></li>
             <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </nav>
@@ -617,52 +344,40 @@ text-decoration: none;
                 </div>
             </div> 
         </section>
-        <div class="img_a">
-        <img src="fotos/geekbox2.png">
-      </div> 
-      <h1 style="margin-left: 4%; font-family: 'Roboto Mono', monospace; color: #fff; font-weight: 400;" class="h1d">ENCONTRE POR GÊNERO</h1>
-      <div class="cats">
-        <a href="#" class="te"><img src="fotos/psychiatric-8128531_12802.jpg"><p>Terror</p></a>
-        <a href="#" class="pl"><img src="fotos/mario2.jpg"><p>Plataforma</p></a>
-        <a href="#" class="in"><img src="fotos/hk2.jpg" ><p>Indie</p></a>
-        <a href="#" class="rpg"><img src="fotos/water-3350331_12802.jpg"><p>RPG</p></a>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
       </div>
-      <br><br>
-        <h1 style="margin-left: 4%; font-family: 'Roboto Mono', monospace; color: #fff; font-weight: 400;">MAIS VENDIDOS</h1>
-        <div class="cards_jogos">
-        <div class="card2">
-            <img src="fotos/sally.jpg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
-            <div class="container2">
-              <h4><b>Sally Face</b></h4>
-              <p>R$70,90</p>
-            </div>
-          </div>
-          <div class="card3">
-            <img src="fotos/cuphead.jpeg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
-            <div class="container2">
-              <h4><b>CupHead</b></h4>
-              <p>R$45,00</p>
-            </div>
-          </div>
-          <div class="card4">
-            <img src="fotos/alice.jpg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
-            <div class="container2">
-              <h4><b>Alice </b></h4>
-              <p>R$12,90</p>
-            </div>
-          </div>
-          <div class="card5">
-            <img src="fotos/undertale.jpg" alt="Avatar" style="width:85%; margin-left: 6%; margin-top: 8%;">
-            <div class="container2">
-              <h4><b>Undertale </b></h4>
-              <p>R$20,00</p>
-            </div>
-          </div>
-        </div>
- <br><br>
- 
- </main> 
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+      </div>
+    </div>
+  </div>
   <br><br>
+</main> 
   <footer>
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
