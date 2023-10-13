@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>GeekBox - conta</title>
+
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <ul><div class="img_menu"><img src="fotos/logo_GeekBox-removebg-preview.png" width="8%"></div></ul>
+            <div class="pe"><input type="text" class="pqp" placeholder="Pesquisar itens" itens><i class="fa-solid fa-magnifying-glass"></i></div>
+            <li><a href="index.html">navegar</a></li>
+            <li><a href="#">descobrir</a></li>
+            <li><a href="suporte.html">suporte</a></li>
+            <li><a href="conta.html"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+    <div id="menu">
+      <div id="menu-bar" onclick="menuOnClick()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="index.html">navegar</a></li>
+          <li><a href="#">descobrir</a></li>
+          <li><a href="#">suporte</a></li>
+          <li><a href="conta.html">conta</a></li>
+        </ul>
+      </nav> 
+    </div>
+    
+    <div class="menu-bg" id="menu-bg"></div>
+  <br><br>
+  <footer class="footer">
+    <div class="left">
+      <h4 class="title-footer">GeekBox</h4>
+            <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      <p class="links">
+        <a href="#" title="Css">Suporte</a>
+      </p>
+
+          <p class="Copyright">Copyright &copy; 2023 geekbox - Todos os Direitos Reservados.</p>
+    </div>
+    <div class="right">
+      <h4 class="title-footer">Contato</h4>
+      <form>
+        <input type="email" name="email" placeholder="E-mail">
+        <button class="btn">Enviar</button>
+    </div>
+  </footer>
+<script>
+  function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+</script>
+</body>
+</html> 
