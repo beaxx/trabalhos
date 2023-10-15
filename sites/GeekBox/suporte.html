@@ -3,302 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
-    <title>GeekBox</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+    <link rel="stylesheet" href="sstyle.css">
+    <title>GeekBox - conta</title>
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: #363434;
-}
-/* MENU ------- */
-.menu{
-    width: 100%;
-    padding: 14px;
-}
-
-.menu ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin-right: 10%;
-}
-
-.menu a{
-    text-decoration: none;
-    color: #ffffffa6;
-    font-family: 'Roboto Mono', monospace;
-    transition: color 0.5s;
-    padding-left: 20px;
-}
-
-.menu a:hover{
-    color: #fff;
-    transform: 0.5s;
-}
-
-  #menu {
-    z-index: 2;
-    font-family: 'Roboto Mono', monospace;
-  }
-  
-  #menu-bar {
-    width: 45px;
-    height: 40px;
-    margin: 30px 0 20px 20px;
-    cursor: pointer;
-  }
-  
-  .bar {
-    height: 5px;
-    width: 100%;
-    background-color: #ffffff;
-    display: block;
-    border-radius: 5px;
-    transition: 0.3s ease;
-  }
-  
-  #bar1 {
-    transform: translateY(-4px);
-  }
-  
-  #bar3 {
-    transform: translateY(4px);
-  }
-  
-  .nav {
-    transition: 0.3s ease;
-    display: none;
-  }
-  
-  .nav ul {
-    padding: 0 22px;
-  }
-  
-  .nav li {
-    list-style: none;
-    padding: 12px 0;
-  }
-  
-  .nav li a {
-    color: #ffffffa6;
-    font-size: 20px;
-    text-decoration: none;
-    transition: color 0.5s;
-  }
-  
-  .nav li a:hover {
-    color: #fff;
-    transform: 0.5s;
-  }
-  
-  .menu-bg, #menu {
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-  
-  .menu-bg {
-    z-index: 1;
-    width: 0;
-    height: 0;
-    margin: 30px 0 20px 20px;
-    background: radial-gradient(circle, #732ca3, #4d1672);
-    border-radius: 50%;
-    transition: 0.3s ease;
-  }
-  
-  .change {
-    display: block;
-  }
-  
-  .change .bar {
-    background-color: white;
-  }
-  
-  .change #bar1 {
-    transform: translateY(4px) rotateZ(-45deg);
-  }
-  
-  .change #bar2 {
-    opacity: 0;
-  }
-  
-  .change #bar3 {
-    transform: translateY(-6px) rotateZ(45deg);
-  }
-  
-  .change-bg {
-    width: 520px;
-    height: 460px;
-    transform: translate(-60%,-30%);
-  }
-
-.pe{
-    background-color: rgb(36, 35, 40);
-    width: 220px;
-    height: 35px;
-    border-radius: 30px;
-    margin-left: -40%;
-}
-
-.pe input{
-    outline: 0 none;
-    border: 0 none;
-    color: #ffffff;
-    background-color: transparent;
-    margin-left: 5%;
-    margin-top: 2%;
-}
-
-.pe input::placeholder{
-    color: #ffffff64;
-}
-
-.pe i{
-    color: #ffffffa6;
-    transition: color 0.5s;
-    cursor: pointer;
-    margin-top: 3%;
-}
-
-.pe i:hover{
-    color: #fff;
-    transform: 0.5s;
-}
-
-main{
-    margin: auto;
-    max-width: 1280px;
-    min-width: none;
-}
-.img_card{
-    display: flex;
-    justify-content: space-between;
-}
-
-.ch{
-    border-radius: 10px;
-    margin-left: 9%;
-    margin-top: 9%;
-}
-
-.txt_card{
-    padding-left: 10%;
-    line-height: 25px;
-    margin-top: 2%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-}
-
-.txt_card h4{
-    color: #828282;
-}
-
-.txt_card p{
-    color: #fff;
-    font-size: 140%;
-    font-weight: 400;
-    line-height: 35px;
-}
-
-.jogos{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2%;
-}
-    footer {
-        position: absolute;
-        width: 100%;
-        background-color: rgb(23, 21, 27);
-        line-height: 35px;
-    }
-    
-    footer i{
-        color: hsla(0, 0%, 100%, 0.495);
-        font-size: 130%;
-        transition:color .5s;
-        cursor: pointer;
-        margin-left: 3%;
-        margin-top: 2%;
-    }
-    
-    footer i:hover{
-        color: #FFF;
-    }
-    footer .seta{
-        float:right;
-        margin-top: 2%;
-        margin-right: 2%;
-    }
-
-    footer .txtde{
-        color: hsla(0, 0%, 100%, 0.495);
-        text-decoration: none;
-        transition: color .5s;
-        font-family: 'Roboto Mono', monospace;
-        margin-left: 3%;
-    }
-    
-    footer .txtde:hover{
-        color: #FFF;
-    }
-
-    footer .txt{
-        color: hsla(0, 0%, 100%, 0.495);
-        text-decoration: none;
-        transition: color .5s;
-        font-family: 'Roboto Mono', monospace;
-        margin-left: 3%;
-        max-width: 25%;
-    }
-    
-    footer .txt:hover{
-        color: #FFF;
-    }
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    h1{
-        text-align: center;
-    }
-    .container{
-        display: none;
-    }
-    .menu{
-        display: none;
-    }
-
-}
-@media(min-width: 768px){
-
-}
-
-@media(min-width: 1200px){
-    #menu{
-        display: none;
-    }
-}
-@media(max-width: 1200px){
-    .menu{
-        display: none;
-    }
-}
-
-::selection{
-    background-color: #3c1457;
-    color: #fff;
-}
-
-    </style>
 </head>
 <body>
     <nav class="menu">
@@ -307,8 +15,8 @@ main{
             <div class="pe"><input type="text" class="pqp" placeholder="Pesquisar itens" itens><i class="fa-solid fa-magnifying-glass"></i></div>
             <li><a href="index.html">navegar</a></li>
             <li><a href="#">descobrir</a></li>
-            <li><a href="#">suporte</a></li>
-            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="suporte.html">suporte</a></li>
+            <li><a href="conta.html"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </nav>
     <div id="menu">
@@ -322,75 +30,44 @@ main{
           <li><a href="index.html">navegar</a></li>
           <li><a href="#">descobrir</a></li>
           <li><a href="#">suporte</a></li>
-          <li><a href="#">conta</a></li>
+          <li><a href="conta.html">conta</a></li>
         </ul>
       </nav> 
     </div>
-    
     <div class="menu-bg" id="menu-bg"></div>
     <main>
-        <section class="container">
-            <div class="slider_wrapper">
-                <div class="slider">
-                    <img id="slide_1" src="fotos/GeekBox.png" width="100%">
-                    <img id="slide_2" src="fotos/lol.png" width="100%">
-                    <img id="slide_3" src="fotos/geekbox2.png" width="100%">
-                    <img id="slide_4" src="fotos/dbd.png" width="100%">
-                </div>
-                <div class="slider_nav">
-                    <a href="#slide_1"></a>
-                    <a href="#slide_2"></a>
-                    <a href="#slide_3"></a>
-                    <a href="#slide_4"></a>
-                </div>
-            </div> 
-        </section>
-<div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-      </div>
+      <h3>ESTÁ COM PROBLEMAS? CONTATE:</h3>
+      <div class="meio">
+      <i class="fa-solid fa-phone"></i> 4002-8922<br>
+      <i class="fa-solid fa-envelope"></i> suporte_geekbox@gmail.com<br>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-      </div>
+    <div class="sla">
+      <textarea cols="35" rows="8">  Deixe seu Feedback aqui...
+      </textarea>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </main>
+  <br><br><br><br>
+  <footer class="footer">
+    <div class="left">
+      <h4 class="title-footer">GeekBox</h4>
+            <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
       </div>
+      <p class="links">
+        <a href="#" title="Css">Suporte</a>
+      </p>
+
+          <p class="Copyright">Copyright &copy; 2023 geekbox - Todos os Direitos Reservados.</p>
     </div>
-  </div>
-  <br><br>
-</main> 
-  <footer>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="index.html" class="seta"><i class="fa-solid fa-chevron-up"></i></a>
-       <div class="line"></div>
-            <a href="#" class="txt">Termos de Serviço</a>
-            <a href="#" class="txt">Política de Privacidade</a>
-            <a href="#" class="txt">Cookies</a>
-        <a class="txtde">Copyright © 2023,<b>GeekBox.</b> </a>
-</footer>   
+    <div class="right">
+      <h4 class="title-footer">Contato</h4>
+      <form>
+        <input type="email" name="email" placeholder="E-mail">
+        <button class="btn">Enviar</button>
+    </div>
+  </footer>
 <script>
   function menuOnClick() {
   document.getElementById("menu-bar").classList.toggle("change");
@@ -399,4 +76,4 @@ main{
 }
 </script>
 </body>
-</html>
+</html> 
