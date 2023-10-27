@@ -44,21 +44,17 @@
             </div>
             <div class="drt">
                 <h1>CADASTRO</h1>
-                <input type="text" placeholder="digite seu nome"><br>
-                <div class="pass">                
-                  <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho">
-                <input type="password" id="pass" placeholder="crie uma senha"><br>
-              </div> <div class="pass">                
-                <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho">
-              <input type="password" id="pass" placeholder="confirme sua senha"><br>
-            </div>
+                <input type="text" placeholder="digite seu nome"><br>           
+                <input type="password"placeholder="crie uma senha"><br>
+                <input type="password"  placeholder="confirme sua senha"><br>
+            
                 <input type="email" placeholder="digite seu email"><br>
                 <input type="text" placeholder="digite seu endereço"><br>
                 <a href="index.html"><button onclick="javascript:alert('Cadastro realizado com sucesso! ')">cadastrar</button></a>
             </div>
         </div>
 </main>
-  <br><br><br><br>
+  <br>
   <footer class="footer">
     <div class="left">
       <h4 class="title-footer">GeekBox</h4>
@@ -86,14 +82,6 @@
   document.getElementById("nav").classList.toggle("change");
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
-document.getElementById('olho').addEventListener('mousedown', function() {
-  document.getElementById('pass').type = 'text';
-});
-
-document.getElementById('olho').addEventListener('mouseup', function() {
-  document.getElementById('pass').type = 'password';
-});
-
 // Para que o password não fique exposto apos mover a imagem.
 document.getElementById('olho').addEventListener('mousemove', function() {
   document.getElementById('pass').type = 'password';
