@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
+    <script src="js/js.js"></script>
+    <link rel="icon" type="image/jpg" href="fotos/logo_GeekBox-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>GeekBox</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --branco : #fff ;
+    --branco_transparente : #ffffffbd ;
+    --cinza_fundo : #363434;
+    --cinza_escuro1: #242328;
+    --cinza_escuro2 : #252323;
+    --cinza_muito_escuro : #171618;
+    --roxo : #561880;
+    --roxo_claro : #732ca3;
+    --amarelo : #eee421;
+}
+        body{
+            background-color: var(--cinza_fundo);
+            font-family: 'Roboto Mono', monospace;
+        }
+        .menu{
+            display: flex;
+            padding: 20px;
+            font-size: 105%;
+        }
+        .menu ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            gap: 60px;
+            padding-right: 70px;
+        }
+        .menu ul a{
+            color: var(--branco_transparente);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .menu ul a:hover{
+            color: var(--branco);
+            transform: 0.3s;
+        }
+        .menu img{
+            justify-content: flex-start;
+            width: 90px;
+            height: 55px;
+            padding-left: 40px;
+        }
+
+        .pesquisa{
+            background-color: var(--cinza_escuro1);
+            align-items: center;
+            display: flex;
+            width: 22.5%;
+            height: 32px;
+            border-radius: 35px;
+        }
+        .pesquisa input{
+            background-color: transparent;
+            outline: none;
+            border: 0;
+            color: var(--branco_transparente);
+            font-size: 90%;
+            margin-left: 15px;
+        }
+        .pesquisa input::-webkit-search-cancel-button {
+            position: relative;
+            -webkit-appearance: none;
+            right: 5px;
+            height: 10px;
+            width: 10px;
+            border-radius: 10px;
+            background: var(--branco_transparente);
+            cursor: pointer;
+        }
+        .pesquisa input::-webkit-search-cancel-button:hover{
+            background: var(--branco);
+        }
+        .pesquisa span{
+            color: var(--branco_transparente);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .pesquisa span:hover{
+            color: var(--branco);
+            transform: 0.3s;
+        }
+        /* MENU RESPONSIVO */
+
+        #menu {
+  z-index: 2;
+}
+
+#menu-bar {
+  width: 45px;
+  height: 40px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: var(--branco);
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.3s ease;
+  display: none;
+}
+
+.nav ul {
+  padding: 0 22px;
+}
+
+.nav li {
+  list-style: none;
+  padding: 12px 0;
+}
+
+.nav li a {
+  color: var(--branco_transparente);
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav li a:hover {
+ color: var(--branco);
+ transform: all 0.3s;
+}
+
+.menu-bg, #menu {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(circle, var(--roxo_claro), var(--roxo));
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+}
+
+.change .bar {
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%,-30%);
+}
+
+main{
+    margin: auto;
+    max-width: 1280px;
+    min-width: none;
+}
+
+::selection{
+    color: var(--branco);
+    background-color: var(--roxo_claro);
+}
+
+.row{
+    width: 100%;
+    margin: auto;
+    margin-top: 3%;
+}
+.card{
+    margin: auto;
+    background-color: var(--cinza_escuro2);
+    color: var(--branco);
+    width: 90%;
+}
+
+.btn{
+    background-color: var(--roxo_claro);
+    color: var(--branco);
+    border: none;
+}
+.btn:hover{
+    background-color: var(--roxo);
+}
+.btn:active{
+    background-color: var(--roxo);
+}
+h2{
+    color: var(--branco);
+    margin-left: 40px;
+    margin-left: 5%;
+}
+
+/* footer */
+.footer{
+
+background-color: var(--cinza_muito_escuro);
+width: 100%;
+height:100%;
+float: left;
+font-size: 18px;
+padding: 50px 10px 50px 10px;
+
+}
+.footer .left{ 
+
+width:100%; 
+float:left; 
+border-bottom:1px #222424 solid;
+border-right:0; 
+margin-bottom:20px; 
+padding-bottom:20px;
+}
+
+.footer .title-footer {
+
+color: var(--branco);
+font-family: 'DM Sans', sans-serif;
+font-weight: initial;
+font-size:26px;
+width:100%;
+float:left;
+margin-bottom:15px;
+
+}
+
+.footer .title-footer span{
+
+color:  var(--roxo_claro);
+font-family:'DM Sans', sans-serif;
+font-weight: bold;
+
+}
+
+/* Footer links */
+
+.footer .links{
+
+width: 100%;
+float: left;
+color:  #ffffff;
+margin-bottom: 20px;
+padding: 0;
+
+}
+
+.footer .links a{
+
+display: block;
+line-height: 33px;
+text-decoration: none;
+color: #fff;
+font-family:'DM Sans', sans-serif;
+font-size:16px;
+transition:0.3s;
+
+
+}
+
+.footer .links a:hover { color:#732ca3; }
+
+.footer .Copyright{
+
+font-family:'DM Sans', sans-serif;
+color:  #8f9296;
+font-size: 14px;
+font-weight: normal;
+margin-bottom: 10px;
+
+}
+
+/*Rede Sociais*/
+
+.footer .footer-icons{
+
+width:100%;
+float:left;
+margin-bottom:20px;
+}
+
+.footer .footer-icons a{
+
+display: inline-block;
+width: 35px;
+height: 35px;
+cursor: pointer;
+background-color:  #33383b;
+border-radius: 50px;
+font-family:'DM Sans', sans-serif;
+font-size: 20px;
+color: #ffffff;
+text-align: center;	
+line-height: 35px;
+margin-bottom: 5px;
+transition:0.3s;
+
+}
+
+.footer .footer-icons a:hover{ background-color:#732ca3; }
+
+/*Right*/
+
+.footer .right   { width:100%; float:left; }
+.footer .right p {
+
+font-family: 'DM Sans', sans-serif;
+font-weight: initial;
+display: inline-block;
+vertical-align: top;
+font-size: 30px;
+color: #ffffff;
+
+}
+
+/*formulario*/
+
+.footer form { width:100%; float:left; }
+
+.footer form input,
+.footer form textarea{
+
+display: block;
+border-radius: 3px;
+box-sizing: border-box;
+background-color:  #1f2022;
+box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+border: none;
+resize: none;
+outline: none;
+font: inherit;
+font-size: 14px;
+font-family:'DM Sans', sans-serif;
+font-weight: normal;
+color:  #d1d2d2;
+width: 100%;
+padding: 18px;
+
+}
+
+.footer ::-webkit-input-placeholder {
+color:  #5c666b;
+}
+
+.footer ::-moz-placeholder {
+color:  #5c666b;
+opacity: 1;
+}
+
+.footer :-ms-input-placeholder{
+color:  #5c666b;
+}
+
+
+.footer form input{
+
+width: 100%;
+height: 55px;
+float: left;
+margin-bottom: 15px;
+
+}
+
+.footer form textarea{
+height: 100px;
+margin-bottom: 20px;
+}
+
+.footer form .btn{
+
+border-radius: 3px;
+background-color:  #1f2022;
+color: #ffffff;
+border: 0;
+padding: 15px 50px;
+font-family: 'DM Sans', sans-serif;
+font-weight: bold;
+float: left;
+cursor: pointer;
+transition: 0.3s;
+
+
+}
+
+.footer form .btn:hover { background-color:  #732ca3; }
+
+/*Responsive*/
+@media (min-width: 1280px) {
+
+.footer               { padding: 100px 50px 50px 100px; }
+.footer .Copyright    { font-size: 16px; }
+.footer form input,
+.footer form textarea { width: 100%; float:left; }
+.footer form button   { padding: 10px 35px; }
+
+}
+
+@media (min-width: 768px) {
+
+.footer .left         { width:48%; border-bottom:0; }
+.footer .right        { width:48%; padding-left: 4%; border-left: 1px #222424 solid; } 
+.footer form          { margin-top: 30px; }
+.footer form          { display: block; }
+.footer form button   { float: none; }
+
+}
+.line{
+    max-width: 100%;
+    border: solid 1.5px hsla(0, 0%, 100%, 0.495);;
+    margin-bottom: 1%;
+}
+
+
+/* responsivo */
+@media(min-width: 1200px){
+    #menu{
+        display: none;
+    }
+    .pesquisa span{
+        right: 15px;
+        position: relative;
+    }
+    .pesquisa input::-webkit-search-cancel-button {
+        right: 15px;
+    }
+}
+@media(max-width: 1200px){
+    .menu{
+        display: none;
+    }
+    h2{
+    text-align: center;
+    }
+}
+@media(max-width: 900px){
+    h2{
+        margin-top: 13%;
+    }
+    .card{
+        margin-top: 40px;
+    }
+}
+    </style>
+</head>
+<html>
+<body>
+    <header>
+        <nav class="menu">
+            <img src="fotos/logo_GeekBox-removebg-preview.png" alt="logo" width="100%">
+            <ul>
+                <div class="pesquisa"><input type="search" placeholder="pesquisar..."><span class="material-symbols-outlined">search</span></div>
+                <li><a href="index.html">navegar</a></li>
+                <li><a href="descobrir.html">descobrir</a></li>
+                <li><a href="suporte.html">suporte</a></li>
+                <li><a href="conta.html"><span class="material-symbols-outlined">account_circle</span></a></li>
+            </ul>
+        </nav>
+        <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+              <ul>
+                <li><a href="index.html">Navegar</a></li>
+                <li><a href="descobrir.html">Descobrir</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+                <li><a href="conta.html">Conta</a></li>
+              </ul>
+            </nav> 
+          </div>
+          <div class="menu-bg" id="menu-bg"></div>
+    </header>
+    <main>
+        <h2>CONHEÇA NOSSOS PLANOS</h2>
+        <div class="row">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><b>CAIXA DE R$199,99</b></h5>
+                  <p class="card-text"><ul>
+                    <li>Jogo premium atual(lançamento recente ou popular).</li>
+                    <li>Periférico de alta qualidade (mouse, teclado, controle).</li>
+                     <li>Camiseta exclusiva relacionada a jogos.</li>
+                </ul></p>
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><b>CAIXA DE R$99,99</b></h5>
+                  <p class="card-text"><ul>
+                    <li>Jogo intermediário bem avaliado.</li>
+                    <li>Pequeno periférico adicional (mouse pad, fone de ouvido).</li>
+                    <li>Adesivos temáticos de jogos.</li></ul></p>
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><b>CAIXA DE R$49,99</b></h5>
+                  <p class="card-text"><ul>
+                    <li>Jogo indie ou clássico.</li>
+                    <li>Item de colecionador simples (pôster, chaveiro).</li>
+                    <li>Cupom de desconto para futuras compras.</li>
+                </ul></p>
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                </div>
+              </div>
+        </div>
+        <Br><br>
+        <div class="card text-center">
+            <div class="card-header">
+              assinatura de R$300,00    
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">2 caixas a cada 15 dias</h5>
+              <p class="card-text">Benefícios e brindes! Venha ver sobre esse pacote limitado</p>
+              <a href="4caixa.html" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+    </main>
+    <br><br><br>
+    <footer class="footer">
+        <div class="left">
+          <h4 class="title-footer">Geek<span>Box</span></h4>
+                <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+          <p class="links">
+            <a href="suporte.html" title="Css">Suporte</a>
+          </p>
+    
+              <p class="Copyright">Copyright &copy; 2023 geekbox - Todos os Direitos Reservados.</p>
+        </div>
+        <div class="right">
+          <h4 class="title-footer">Contato</h4>
+          <form>
+            <input type="email" name="email" placeholder="E-mail">
+            <button class="btn">Enviar</button>
+        </div>
+      </footer>
+</body>
+</html>
