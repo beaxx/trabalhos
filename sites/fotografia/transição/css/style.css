@@ -1,0 +1,323 @@
+/* fontes google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root{
+    --escuro: #181616;
+    --claro: #a65959;
+    --vermelho: #520909;
+    --branco : #fff;
+    --vermelho_clarinho :#682121 ;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    max-width: 1280px;
+    min-width: none;
+    margin: auto;
+}
+
+/*  MENU */
+.menu{
+    background-color: #ffffffe4;
+    box-shadow: 1px 2px 5px #00000066;
+    font-family: 'Poppins', sans-serif; 
+    padding: 10px;
+    display: flex;
+}
+
+.menu ul{
+    justify-content:flex-end;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items:center;
+    width: 100%;
+}
+
+.menu a{
+    color: var(--escuro);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.menu img{
+    justify-content: flex-start;
+    animation-name: gira;
+    animation: gira 5s linear; 
+}
+.menu a:hover{
+    color: var(--claro);
+    transform: 0.2s;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+  /* capa do site */
+
+  header{
+    background-image:url(../imagens/pexels-alexander-mass-18916097.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  header h1{
+    font-weight: 600;
+    padding-top: 5%;
+    font-size: 350%;
+    text-align: center;
+    color: var(--branco);
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 1px 2px 5px #00000075;
+  }
+  header p{
+    padding-top: 2%;
+    color: var(--branco);
+    font-family: 'Roboto', sans-serif;
+    font-size: 110%;
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 3%;
+  }
+
+  /* BANDAS */
+  .bandas{
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+
+  .banda{
+    display: flex;
+  }
+  .banda h1{
+    font-family: 'Oswald', sans-serif;
+ }
+ .bandas p{
+  margin-top: 2%;
+  max-width: 80%;
+  font-size: 110%;
+  font-family: 'Roboto', sans-serif;
+ }
+ .txts{
+  flex: 40%;
+  margin-left: -300px;
+  line-height: 25px;
+ }
+
+.banda2, .banda3{
+  display: flex;
+}
+
+.banda2 h1, .banda3 h1{
+  font-family: 'Oswald', sans-serif;
+  margin-top: 40px;
+}
+
+.mtz{
+transition: all 250ms;
+width: 80%;
+}
+
+.mtz:hover{
+  transform: scale(1.1);
+}
+.cas{
+    transition: all 250ms;
+    width: 80%;
+    margin-top: 40px;
+    }
+    .cas:hover{
+        transform: scale(1.1);
+    }
+.sod{
+    transition: all 250ms;
+    width: 80%;
+    margin-top: 40px;
+   }
+.sod:hover{
+    transform: scale(1.1);
+    }
+  ::selection{
+    background-color: var(--vermelho_clarinho);
+    color: var(--branco);
+  }
+
+
+  /* CANTORES */
+.cantores{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 30%;
+  object-fit: cover;
+}
+
+.cantor h1{
+  font-family: 'Oswald', sans-serif;
+  margin-top: 10%;
+}
+.cantor p, .cantor2 p, .cantor3 p{
+margin-top: 5%;
+font-size: 110%;
+font-family: 'Roboto', sans-serif;
+}
+
+.cantor .txts, .cantor2 .txts, .cantor3 .txts{
+margin-left: 735px;
+width: 50%;
+line-height: 25px;
+}
+
+  .cantor2 h1{
+    font-family: 'Oswald', sans-serif;
+    margin-top: 370px;
+  }
+    .cantor3 h1{
+      font-family: 'Oswald', sans-serif;
+      margin-top: 340px;
+    }
+    
+  
+  .a2 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    transition: transform 0.8s;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+  
+  .a {
+    width: 500px;
+    height: 500px;  
+    transition: transform 0.8s;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 40px;
+
+    &:hover {
+      transform: translate(80px, 80px);
+  }
+  }
+  
+  .b2 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    transition: transform 0.8s;
+    margin-left: 40px;
+    margin-top: 350px;
+  }
+  
+  .b {
+    width: 500px;
+    height: 500px;  
+    transition: transform 0.8s;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 350px;
+
+    &:hover {
+      transform: translate(80px, 80px);
+  }
+  }
+  
+  .c2 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    transition: transform 0.8s;
+    margin-left: 40px;
+    margin-top: 330px;
+  }
+  
+  .c {
+    width: 500px;
+    height: 500px;  
+    transition: transform 0.8s;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 330px;
+
+    &:hover {
+      transform: translate(80px, 80px);
+  }
+  }
+
+  /* MARKETING */
+    .marketing h1::before {  
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+    
+    .marketing h1:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    
+    .marketing h1::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      inset: 0 0 0 0;
+      background: var(--claro);
+      opacity: (0.5);
+      z-index: -1;
+      transition: transform .3s ease;
+    }
+
+    .marketing h1{
+      color: var(--escuro);
+      position: relative;
+      margin-top: 400px;
+      font-size: 300%;
+      font-family: 'Oswald', sans-serif;
+      padding-left: 40px;
+    }
+    .marketing a{
+      color: var(--escuro);
+      font-size: 50%;
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    /* FOOTER */
+    footer{
+      background-color: var(--vermelho_clarinho);
+      color: var(--branco);
+      text-align: center;
+      padding: 20px;
+      line-height: 25px;
+      font-family: 'Poppins', sans-serif; 
+    }
+    footer a{
+      color: var(--branco);
+    }
+
+  /* RESPONSIVO */
+
+  
+@media screen and (max-width: 800px) {
+    .menu img {
+      display: none;
+    }
+    .menu ul{
+        justify-content: center;
+    }
+  }
