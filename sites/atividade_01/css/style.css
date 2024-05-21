@@ -1,0 +1,401 @@
+/* FONTES DO GOOGLE PARA O SITE */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/* font-family: "Kode Mono", monospace; */
+/* font-family: "Oxygen", sans-serif; */
+/* font-family: "Ubuntu", sans-serif; */
+/* font-family: "Oswald", sans-serif; */
+/* font-family: "New Rocker", system-ui; */
+
+:root{
+    --white: #fff;
+    --less_white: #ffffff95;
+    --dark_red: rgb(85, 31, 31);
+    --red: rgb(129, 21, 21);
+    --black_text: rgb(29, 7, 7);
+    --black: rgb(43, 36, 36);
+    --blacker: rgb(31, 26, 26);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(44, 40, 40);
+    cursor: url(../images/cursor.png), default;
+}   
+/* MENU */
+.menu{
+    background-color: transparent;
+    position: fixed ;
+    display: flex;
+    transition: .5s;
+    padding: 10px 60px 10px 40px;
+    width: 100%;
+    font-family: "Titillium Web", sans-serif;
+}
+.menu img{
+    justify-content: flex-start;
+    width: 120px;
+    transition: all 0.4s linear;
+ }
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.menu ul a{
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+.menu.rolagem:hover{
+    background-color: var(--dark_red);
+    padding: 15px 60px 15px 40px;
+} 
+
+.img-menu.rolagem{
+    opacity: 0;
+}
+
+.texto1.rolagem{
+    color: transparent;
+}.texto2.rolagem{
+    color: transparent;
+}.texto3.rolagem{
+    color: transparent;
+}.texto4.rolagem{
+    color: transparent;
+}
+.menu.rolagem:hover .texto1,
+.menu.rolagem:hover .texto2,
+.menu.rolagem:hover .texto3,
+.menu.rolagem:hover .texto4 {
+    color: var(--white); 
+}
+.menu.rolagem:hover .img-menu{
+    opacity: 100;
+}
+
+
+/* MENU RESPONSIVO */
+
+#menu .fake-trigger{
+    z-index: 1011;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;    
+    margin: 20px 0px 0px 20px;
+}
+#menu .span-lines{
+    z-index: 1010;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    z-index: 999;
+    margin: 20px 0px 0px 20px;
+    transition: 0.5s;
+}
+#menu .span-lines span{
+    z-index: 1010;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--white);
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+
+#menu ul{
+    z-index: 990;
+    list-style: none;
+    transition: .5s;
+    margin-left: calc(100vh - 200vh);
+    position: fixed;
+    top: 0;
+    width: 40vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#menu ul a{
+    text-decoration: none;
+    color: var(--white);
+    font-family: "Titillium Web", sans-serif;
+    line-height: 25px;
+}
+#menu .fake-trigger:checked ~ .span-lines span:nth-child(1){ 
+    transform-origin: 0% 0%; 
+    transform: rotate(45deg) scaleX(1);
+}
+#menu .fake-trigger:checked ~ .span-lines span:nth-child(2){opacity: 0;}
+
+#menu .fake-trigger:checked ~ .span-lines span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1);
+}
+
+#menu .fake-trigger:checked ~ ul{
+    margin: 0;
+    background-color: var(--dark_red);
+}
+
+#menu .img-menu-responsive{
+    width: 150px;
+}
+
+/* INTRODUÇAO */
+main{
+    padding-top: 70px; 
+    min-height: calc(100vh - 70px); 
+    overflow-y: auto; 
+}
+
+.intro-content{
+    display: flex;
+    padding: 40px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+.intro-content img{
+    width: 400px;
+    box-shadow: var(--dark_red) 0px 0px 90px;
+    transition: 0.4s;
+    cursor: pointer ;
+}
+.intro-content img:hover{
+    transform: scale(1.1);
+}
+.intro-content h1{
+    color: var(--red);
+    text-shadow: var(--dark_red) 0px 0px 20px;  
+    font-family: "New Rocker", system-ui;
+    letter-spacing: 10PX;
+    font-weight: 400;
+}
+.intro-content p{
+    margin-top: 20px;
+    color: var(--white);    
+    text-indent: 20px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 19px;
+}
+
+.drt, .eqd{
+    flex: 1;
+    text-align: center;
+}
+
+.eqd{
+    margin-top: 70px;
+}
+
+/* MÚSSICAS */
+
+
+.music-content{
+    padding: 40px;
+}
+
+.music-content h1{
+    font-family: "Titillium Web", sans-serif;
+    color: var(--red);
+    text-shadow: var(--dark_red) 0px 0px 10px;
+    font-weight: 400;
+}
+
+.songs-play{
+    display: flex;
+    padding: 30px 0px 0px 00px;
+    margin-bottom: 20px;
+}
+
+.img-disco{
+    width: 150px;
+    height: 150px;
+}
+.disco{
+    background-color: var(--white);
+    width: 110px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    flex: 1;
+}
+.about-disco{
+    flex: 3;
+    padding-left: 40px;
+    color: var(--white);
+    line-height: 25px;
+    font-family: "Titillium Web", sans-serif;
+}
+.about-disco p{
+    font-size: larger;
+}
+.about-disco button{
+    margin-top: 20px;
+    background-color: transparent;
+    border: SOLID 1.5px var(--red); 
+    border-radius: 5px;
+    outline: 0;
+    width: 40px;
+    height: 40px;
+    font-size: larger;
+    color: var(--white);
+    cursor: pointer;
+}
+.about-disco a{
+    color: var(--white);
+}
+.about-disco  h2{
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var(--red);
+    text-shadow: var(--dark_red) 0px 0px 10px;
+}
+
+.about-disco span{
+    color: var(--red);
+    text-shadow: var(--dark_red) 0px 0px 10px;
+}
+
+/* MEMBROS */
+.member-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+.member-content img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 70px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.member-content img:hover{
+    transform: scale(1.1);
+    box-shadow: var(--red) 0px 0px 20px;
+}
+
+.members-band h1{
+    font-family: "Titillium Web", sans-serif;
+    color: var(--red);
+    text-shadow: var(--dark_red) 0px 0px 10px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.members-band{
+    padding: 40px 40px 100px 40px;
+}
+
+.member-content p{
+    margin-top: 10px;
+    color: var(--white);    
+    text-align: center  ;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+}
+
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animacao {
+    animation: girar 2s linear infinite;
+}
+
+/* FOOTER */
+.footer{
+    bottom: 0px;
+    color: var(--white);
+}
+.footer .footer-part1{
+    background-color: var(--red);
+    padding: 5px 30px 5px 30px;
+    display: flex;
+    align-items: center;
+}
+.footer .footer-part1 .icons{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 20px;
+    font-size: large;
+    color: var(--less_white);
+}
+.footer .footer-part1 .icons i {
+    cursor: pointer;
+    transition: .4s;
+}
+.footer .footer-part1 .icons i:hover{
+    color: var(--white);
+}
+.footer .footer-part1 img{
+    width: 120px;
+}
+
+.footer .footer-part3 {
+    background-color: var(--blacker);
+}
+.footer .footer-part3 p{
+    font-family: "Titillium Web", sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer .footer-part2 p{
+    width: 50%;
+}
+
+.text-1 p, .text-2 ul , .text-3 ul, .text-4 ul{
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+.text-2 ul li , .text-3 ul li, .text-4 ul li{
+    color: var(--less_white);   
+    transition: .5s;
+    width: 200px;
+}
+
+.text-2 ul li:hover , .text-3 ul li:hover, .text-4 ul:hover{
+    color: var(--white);   
+}
+
+/* DETALHES FRU FRU */
+::selection{
+    color: var(--white);
+    background-color: var(--dark_red);
+}
+

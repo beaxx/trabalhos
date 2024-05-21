@@ -1,0 +1,8 @@
+Desenvolva uma página de internet que divulgue game/comida/lugar de sua preferência
+
+-- Uma BANDA!!!!!!!!!
+Vou fazer da banda matanza 
+-> iniciar anuncioando um show
+-> falar sobre a banda e integrantes
+-> artes legais e músicas (se possível um albúm rodando)
+-> footer tímido

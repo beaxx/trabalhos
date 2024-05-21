@@ -1,0 +1,37 @@
+@media screen and (max-width: 900px) {
+    .eqd,.drt{
+        flex: 100%;
+    }
+    .intro-content{
+        flex-wrap: wrap ;
+    }
+    .drt{
+        padding-top: 50px;
+    }
+   .intro-content{
+    padding-top: 0px;
+   }
+   main{
+    padding-top: 0px;
+   }
+   .menu{
+    display: none;
+   }
+   .disco{
+    background-color: transparent;
+   }
+   .intro-content img{
+    width: 290px;
+   }
+   .member-content{
+        flex-direction: column;
+   }
+   h1{
+    text-align: center;
+   }
+}
+@media screen and (min-width: 900px) {
+    #menu{
+        display: none;
+    }
+}
