@@ -26,7 +26,7 @@
 
 main{
     max-width: 1280px;
-    min-height: auto;
+    min-width: none;
     margin: auto;
 }
 
@@ -54,13 +54,14 @@ p, li, span{
 }
 
 .main-banner a{
-    position: relative;
+    position: relative
 }
 
 .main-banner a::before{
+    font-weight: 500;
     content: "";
     color: var(--Green);
-    animation: palavras 20s infinite;
+    animation: palavras 15s infinite;
 }
 
 @keyframes palavras {
@@ -87,7 +88,7 @@ p, li, span{
     height: 100%;
     border-left: 2px solid var(--Green);
     right: -18px;
-    animation: cursor 1s infinite, digita 20s steps(15) infinite;
+    animation: cursor 1s infinite, digita 15s steps(15) infinite;
     width: calc(100% + 18px);
     background-color: var(--White);
 }
@@ -188,6 +189,7 @@ p, li, span{
     align-items: center;
     text-align: center;
     height: 100%;
+    font-size: large;
 }
 
 .self-intro .left .sub-text{
@@ -322,4 +324,38 @@ p, li, span{
     text-align: center;
     font-style: italic;
     padding: 40px;
+}
+
+/* informações técnicas */
+.tech-info{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    gap: 60px;
+    background-color: var(--White);
+}   
+
+.tech-info .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.tech-info .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.tech-languages img, .technology img{
+    width: 100px;
+}
+
+.tech-info h2{
+    font-family: "Inter", sans-serif;
 }

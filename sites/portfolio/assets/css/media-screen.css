@@ -1,10 +1,12 @@
 @media screen and (min-width: 720px){
-
+    .main-banner span{
+        letter-spacing: 5px;
+            }
     .self-intro{
         flex-wrap: nowrap;
         height: 100vh;
     }
-    .self-intro .right, .left{
+    .self-intro .right, .self-intro .left{
         flex: 1;  
     }
     .self-intro .left .arrow-button{
@@ -17,4 +19,12 @@
     }
     .self-intro .left .arrow-button .normal-arrow{display: block;}
     .self-intro .left .arrow-button .responsive-arrow{display: none;}
+
+    .tech-info{
+        flex-wrap: nowrap;
+        height: 100vh;
+    }
+    .tech-info .right, .tech-info .left{
+        flex: 1;  
+    }
 }
