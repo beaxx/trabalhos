@@ -10,16 +10,34 @@
 </head>
    <body>
       <main>
-         <div class="main-banner">
-            <!-- Adivionar os desenhos feitos por vocÊ -->
+         <div class="menu">
+            <ul>
+               <li><a href="#self-intro">Sobre mim</a></li>
+               <li><a href="">Tecnologias</a></li>
+               <li><a href="">Contato</a></li>
+            </ul>
+         </div>
+         <nav class="menu-responsivo">
+            <input type="checkbox" class="fake-trigger">
+            <div class="icon">
+               <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul>
+               <li><a href="#self-intro">Sobre mim</a></li>
+               <li><a href="">Tecnologias</a></li>
+               <li><a href="">Contato</a></li>
+            </ul>
+         </nav>
+         
+         <div class="main-banner" >
             <span>PORTFOLIO</span>
             <p>Desenvolvedora <a></a></p>
          </div>
-         <div class="waves-intro">
+         <div class="waves-intro" >
             <div class="wave wave1"></div>
             <div class="wave wave2"></div>
          </div>
-         <div class="self-intro">
+         <div class="self-intro" id="self-intro">
             <div class="left">
                <div class="text">
                   <span>OLA! TUDO BEM?</span>
@@ -39,11 +57,13 @@
                               <p>currículo</p>
                            </button>
                         </a>
+                        <img src="assets/images/arrow.png" alt="Seta" class="normal-arrow dir">
                      </div>
                   </div>
                </div>
             </div>
             <div class="right">
+               <div class="border-image">
                <div class="self-image">
                   <img src="assets/images/profileTeste1.jpg" alt="Foto de Perfil">
                   <div class="self-text">
@@ -73,6 +93,7 @@
                </div>
             </div>
          </div>
+         </div>
          <div class="phrase">
             <p>“O resultado do programa é relativo o nível de conhecimento do programador.”</p>
          </div>
@@ -85,7 +106,6 @@
                   <img src="assets/images/teconologias/php.jpg" alt="">
                   <img src="assets/images/teconologias/react.jpg" alt="">
                   <img src="assets/images/teconologias/mysql.jpg" alt="">
-                  <img src="assets/images/teconologias/c#.jpg" alt="">
                   <img src="assets/images/teconologias/GL.jpg" alt="">
                </div>
                <div class="technology">
@@ -119,5 +139,6 @@
             </div>
          </div>
       </main>
+      <script src="assets/javascript/index.js"></script>
    </body>
 </html>
