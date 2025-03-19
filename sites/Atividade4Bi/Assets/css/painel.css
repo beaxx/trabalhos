@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* https://uxdesign.cc/designing-an-e-commerce-site-for-a-toy-store-a-ux-case-study-d244f891d028 -- referenfcia p o modelo */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.main{
+    max-width: 1440px;
+    min-height: auto;
+    margin: auto;
+}
+body{
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+:root{
+    /* cores */
+    --red: #cc3535;
+    --Darkred: #a02121;
+    --LighterBrown: #c09a7f;
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LighterGrey: #f0f1f4;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Grey:#4d4d4d;
+    --Black: #000;
+    --blackTransparent: #0000006c;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+    --transition2: 0.2s ;
+}
+
+
+.content{
+    display: flex;
+    width: 100%;
+    z-index: 0;
+    height: 88vh;
+}
+
+.menu-faixa{
+    padding: 10px 40px 10px 40px;
+    height: 12vh;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1.5px solid var(--MediumGrey);
+}
+
+.text-menu{
+    width: 100%;
+    display: flex;
+}
+
+.menu-faixa span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-family: "Libre Baskerville", serif;
+}
+.back-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.menu-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.menu-btn svg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    border: 2px solid var(--Black);
+    border-radius: 50%;
+    color: var(--Black);
+}
+.back-btn button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.back-btn svg, .menu-btn svg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.menu-principal{
+    transition: var(--transition);
+    transform: translateX(0);
+    z-index: 1;
+    position: fixed;
+    background-color: var(--White);
+}
+.menu-principal.hidden{
+    transform: translateX(-100%);
+}
+
+.menu-principal ul{
+    border-right: 1.5px solid var(--MediumGrey);
+    list-style: none;
+    width: 250px;
+    height: 88vh;
+    margin: 0px;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 60px;
+}
+.menu-principal li{
+    cursor: pointer;
+    padding-left: 20px;
+    border-radius: 20px;
+    width: 90%;
+    transition: var(--transition2);
+}
+.menu-principal a{
+    text-decoration: none;
+    color: var(--Black);
+    font-size: large;
+}
+
+.menu-principal li:hover{
+    background-color: var(--LighterGrey);
+}
+.menu-principal li.actived{
+    background-color: var(--LightGrey);
+}
+
+.conta, 
+.clientes, 
+.produtos, 
+.pedidos{
+   display: none;
+    width: 100%;
+    height: 100%;
+}
+.home{  
+    width: 100%;
+    height: 100%;
+    font-size: larger;
+    font-family: "Libre Baskerville", serif;
+    background-image: url(../images/Login\ -\ Inicio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home .content-home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home .home-text{
+    color: var(--White);
+    text-shadow: 0px 0px 5px var(--blackTransparent);
+}
+
+.conta{
+    height: 100%;
+    width: 100%; 
+    text-align: center;
+}
+.conta .content-image {
+    position: relative; /* Define um contexto para o botão */
+    display: inline-block; /* Ajusta o tamanho ao conteúdo */
+}
+
+.conta img {
+    width: 100px;
+    height: 100px;  
+    border-radius: 50%;   
+    object-fit: cover;
+    display: block;
+}
+
+.conta .upload-btn {
+    position: absolute; /* Posiciona o botão em relação ao pai (content-image) */
+    bottom: 5px; /* Ajuste para alinhar verticalmente */
+    right: 5px; /* Ajuste para alinhar horizontalmente */
+    width: 30px;
+    height: 30px;  
+    border: 1.5px solid var(--Grey);
+    background-color: var(--White);
+    border-radius: 50%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.conta #upload {
+    display: none; /* Oculta o input */
+}
+
+.conta .content-conta{
+    padding: 20px;
+}
+
+.conta input{
+    border-radius: var(--dist);
+    height: 40px;
+    width: 90%;
+    border: none;
+    margin: 10px 0px 20px 0px;
+    outline: none;
+    background-color: var(--LighterGrey);
+    border: none;
+    padding-left: var(--dist);
+}
+
+.conta input::placeholder{
+    color: var(--Black);
+}
+
+.btnsConta{
+    padding: 20px;
+    width: 100%;
+    border-top: 1.5px solid var(--MediumGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    text-align: center; 
+    height: 15vh;
+    gap: 20px;
+}
+
+
+.btn-editar{
+    background-color: var(--LightGrey) !important;
+    color: var(--Black) !important;
+    text-decoration: none;
+    width: 100px;
+    height: 35px;
+    color: var(--White);
+    border-radius: 20px;
+    border: none;
+    padding: 0px !important;
+}
+
+.btn-salvar{
+    background-color: var(--LighterGrey);
+    color: var(--Black) !important;
+    text-decoration: none;
+    width: 100px;
+    height: 35px;
+    color: var(--White);
+    border-radius: 20px;
+    border: none;
+    padding: 0px !important;
+}
+
+.clientes{
+    background-image: url(../images/Login\ -\ Inicio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.container-espace{
+    padding: 20px;
+}
+
+.container-text span{
+    font-size: x-large;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.container-table{
+    background-color: white;
+}
+table{
+    border: 0.5px solid rgb(223, 220, 220);
+}
+tr{
+    background-color: white;
+}
+
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 728px){
+    .conta{
+        text-align: left;
+    }
+    .conta .content-conta{
+        padding: 40px;
+    }
+    
+    .dados input{
+        border-radius: var(--dist);
+        height: 40px;
+        width: 100%;
+        border: none;
+        margin: 10px 0px 0px 0px;
+        outline: none;
+        background-color: var(--LighterGrey);
+        border: none;
+        padding-left: var(--dist);
+    }
+
+    .dados input::placeholder{
+        color: var(--Black);
+    }
+
+    .line{
+        display: flex;
+        margin-bottom: 20px;
+        gap: 40px;
+        width: 100%;
+    }
+    .nome,.Snome, .email, .id, .endereco{
+        width: 100%;
+    }
+    #endereco{
+        width: 96%;
+    }
+    .btnsConta{
+        border-top: 1.5px solid var(--MediumGrey);
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        align-items: center;
+    }
+
+    .btn-editar, .btn-salvar{
+        background-color: var(--LightGrey);
+        color: var(--Black) !important;
+        text-decoration: none;
+        width: 200px !important;
+        height: 35px;
+        color: var(--White);
+        border-radius: 20px;
+        border: none;
+    }
+
+}

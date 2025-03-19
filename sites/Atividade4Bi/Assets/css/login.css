@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* cores */
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Black: #000;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+}
+
+body{
+    overflow-y: hidden;
+    background-image: url(../images/Login\ -\ Inicio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.text-inicio{
+    margin-bottom: 40px;
+    color: var(--White);
+}
+.text-inicio p{
+    margin: auto;
+    width: 60%;
+    font-family: "Inter", sans-serif;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    animation: sobe 1s;
+}
+
+@keyframes sobe{
+    0%{
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.container-login{
+    background-color: var(--White);
+    width: 300px;
+    height: 250px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.content input{
+    border-radius: var(--dist);
+    height: 35px;
+    width: 250px;
+    border: none;
+    margin: 10px;
+    outline: none;
+    background-color: var(--LightGrey);
+}
+
+.content .input-text{
+    background-color: var(--LightGrey);
+    color: var(--Black);
+    padding-left: var(--dist);
+}
+
+.content .input-text::placeholder{
+    color: var(--MediumGrey);
+}
+
+.content .btn-cadastro{
+    background-color: var(--Black);
+    color: var(--White);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+
+
+.content p a{
+    text-decoration: none;
+    color: var(--LightBrown);
+    transition: var(--transition);
+}
+
+.content p a:hover{
+    color: var(--Brown);
+}
+
+.content p, .content p a{
+    font-size: small;
+}
+
+.terms{
+    color: var(--White);
+    width: 65%;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}

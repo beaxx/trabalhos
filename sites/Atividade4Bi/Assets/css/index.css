@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face{
+    font-family: Higuen;
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("../font/Higuen\ Serif.otf");
+}
+/* https://uxdesign.cc/designing-an-e-commerce-site-for-a-toy-store-a-ux-case-study-d244f891d028 -- referenfcia p o modelo */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* cores */
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Grey:#4d4d4d;
+    --Black: #000;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: none;
+    min-width: 1024;
+    margin: auto;
+}
+
+.ad-up{
+    width: 100%;    
+    background-color: var(--LightBrown);
+    color:var(--White) ;
+    font-size: small;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-up p{
+    margin: 0;
+}
+.ad-up a{
+    color: var(--White);
+    text-decoration: none;
+}
+
+.menu-faixa{
+    padding: 40px 60px 40px 60px;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.input-search{
+    width: 100%;
+    display: flex;
+}
+#search{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid var(--MediumGrey)
+}
+.input-search svg{
+    margin-left: -16px;
+    cursor: pointer;
+}
+
+.menu-faixa span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin-bottom: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+.login-car{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.login-car a{
+    text-decoration: none;
+    color: var(--Black);
+}
+.login-car button a{
+    color: var(--Black);
+    text-decoration: none;
+}
+
+.login-car svg{
+    cursor: pointer;
+}
+
+.menu-principal{
+    padding: 0px 60px 0px 60px;
+}
+
+.menu-principal ul{
+    border-top: 1.5px solid var(--MediumGrey);
+    border-bottom: 1.5px solid var(--MediumGrey);
+    padding: 10px 0px 10px 0px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 60px;
+}
+.menu-principal a{
+    text-decoration: none;
+    color: var(--Black);
+    font-size: small;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    background-color: var(--White);
+    border-top: 1.5px solid var(--Black);
+    text-align: left;
+    gap: 20px;
+}
+.dropdown-content a{
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: small;
+}
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -14px; /* Ajuste conforme necessário */
+    border-width: 7px; /* Tamanho da seta */
+    border-style: solid;
+    border-color: transparent transparent var(--Black) transparent; /* Seta para baixo */
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: var(--LightGrey);
+}
+.Rcontainer-banner{
+    display: none;
+    background-image: url(../images/banner2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+}   
+
+.Rcontainer-banner .message-banner h1{
+    font-family: Higuen;
+    font-size: 10vh;
+    color: var(--White);
+}
+
+.container-banner{
+    padding: 20px 60px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+.container-banner img{
+    width: 100%;
+}
+.container-banner .message-banner{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 90px;
+    transform: translateY(-50%);
+    background-color: var(--White);
+}
+
+.container-banner .message-banner span{
+    font-family: "Libre Baskerville", serif;
+}
+
+.container-banner .message-banner a{
+    color: var(--Grey);
+    font-size:smaller;
+    text-decoration: none;
+}
+
+
+
+.divisoria1{
+    border: 1px solid var(--MediumGrey);
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.carousel{
+    padding: 40px 0px 40px 0px;
+    text-align: center;
+}
+.carousel span{
+    font-size: large;
+    font-family: "Libre Baskerville", serif;
+
+}
+
+.carousel-item{
+    text-align: center !important;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-list .card-item .card-link{
+    width: 300px;
+    display: block;
+    background-color: var(--White);
+    padding: 20px;
+    text-decoration: none;
+}
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 2/2;
+    object-fit: cover;
+}
+
+.card-list .card-link .card-title{
+    color: var(--Black);
+}
+
+.card-list .card-link .card-desc{
+    color: var(--Grey);
+    font-size: medium;
+}
+.card-list .card-link .card-price{
+    color: var(--Black);
+    font-size: small;
+}
+.carousel-control-prev, .carousel-control-next{
+    color: transparent !important;
+}
+.carousel-control-prev {
+    margin-left: 100px; /* Ajuste o valor conforme necessário */
+}
+
+.custom-btn {
+    background-color: transparent; /* Cor de fundo */
+    border: none; /* Remove a borda padrão */
+}
+
+.custom-btn .carousel-control-prev-icon,
+.custom-btn .carousel-control-next-icon {
+    background-color: transparent  !important; /* Fundo transparente */
+    filter: invert(1); /* Inverte a cor das setas para preto */
+}
+
+.custom-btn:hover .carousel-control-prev-icon,
+.custom-btn:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7); /* Efeito ao passar o mouse */
+}
+
+.container-story{
+    display: flex;
+    padding: 40px 60px 40px 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-story span{
+    font-size: large;
+    font-family: "Libre Baskerville", serif;
+}
+
+.story-text p{
+    text-indent: 20px;
+    width: 90%;
+    text-align: justify;
+}
+.story-image img{   
+    width: 512px;
+    aspect-ratio: 2/2;
+}
+
+
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 720px) {
+    .menu-faixa{
+        display: none;
+    }
+    .menu-principal{
+        display: none;
+    }
+    .container-banner{
+        display: none; 
+    }
+    .Rcontainer-banner{
+        display: block;
+    }
+    .carousel{
+        display: none;
+    }
+}
+
+::selection{
+    background-color: var(--LightBrown) !important;
+    color: var(--White);
+}

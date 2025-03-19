@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/* https://uxdesign.cc/designing-an-e-commerce-site-for-a-toy-store-a-ux-case-study-d244f891d028 -- referenfcia p o modelo */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* cores */
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Grey:#4d4d4d;
+    --Black: #000;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center  ;
+    align-items: center;
+    height: 100vh;
+}
+
+img{
+    width: 200px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/css/cadastro.css">
+    <title>Cadastro - Deco Home</title>
+</head>
+    <body>
+        <main>
+            <div class="container-left">
+                <div class="text-contl">
+                    <h1>BEM VINDO A DECO HOME!</h1>
+                    <p>Aqui você encontra tudo que precisa para uma casa com seu jeitinho!</p>
+                        <span><a href="#container-right">&#x25BC;</a></span>
+                </div>
+            </div>
+            <div class="container-right" id="container-right">
+                <div class="content-contr">
+                        <button class="btnGoogle" id="btns">
+                            <img src="Assets/images/Google icon.webp" alt="Google icon">
+                            <p>Continuar com Google</p>
+                        </button> <br>
+                        <button class="btnApple" id="btns">
+                            <img src="Assets/images/apple icon.png" alt="Apple icon">
+                            <p>Continuar com Apple</p>
+                        </button><br>
+                        <button class="btnEmail" onclick="continuarEmail()" id="btns">
+                            <img src="Assets/images/email icon.png" alt="E-mail icon">
+                            <p>Continuar com email</p>
+                        </button>
+                        <div class="solid-line"></div>
+                    <form action="php/cadastro.php" method="post" class="form-cad">
+                        <input type="text" name="name" id="name" placeholder="Digite seu nome..." required class="input-text">
+                        <input type="text" name="Sname" id="Sname" placeholder="Digite seu sobrenome..." required class="input-text">
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail..." required class="input-text">
+                        <input type="number" name="idade" id="idade" placeholder="Digite sua idade" required class="input-text" min="0">    
+                        <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required class="input-text">
+                        <input type="password" name="pass" id="pass" placeholder="Crie uma senha..." required class="input-text"><br>
+                        <input type="submit" value="Cadastrar-se" class="btn-cadastro"><br>
+                        <p>Já possui conta?<a href="login.html"> Faça Login.</a></p>
+                    </form><br>
+                <p class="terms">Ao continuar, concordo com os <u>Termos de Uso</u> e <u>Política de Privacidade</u> da Deco Home.</p>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    function continuarEmail() {
+        const btns = document.querySelectorAll('.btnGoogle, .btnApple, .btnEmail');
+        const form = document.querySelector('.form-cad');
+        const continua = document.querySelector('.btnEmail');
+        continua.addEventListener('click', function(event) {
+            btns.forEach(function(btn) {
+                btn.style.display = "none";
+            });
+            form.style.display = "block";  
+        });
+    }
+    continuarEmail();
+});
+
+    </script>
+</html>

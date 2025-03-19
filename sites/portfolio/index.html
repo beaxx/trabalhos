@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media-screen.css">
     <script src="https://kit.fontawesome.com/b6c7ae2a7c.js" crossorigin="anonymous"></script>
-    <title>Portfolio - Home</title>
+    <title>Portfólio - Home</title>
 </head>
    <body>
+      <div class="menu">
+         <ul>
+            <li><a href="#self-intro">Sobre mim</a></li>
+            <li><a href="#tech-info">Tecnologias</a></li>
+            <li><a href="#project">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="">Etec</a></li>
+         </ul>
+      </div>
       <main>
-         <div class="menu">
-            <ul>
-               <li><a href="#self-intro">Sobre mim</a></li>
-               <li><a href="">Tecnologias</a></li>
-               <li><a href="">Contato</a></li>
-            </ul>
-         </div>
          <nav class="menu-responsivo">
             <input type="checkbox" class="fake-trigger">
             <div class="icon">
@@ -24,13 +26,15 @@
             </div>
             <ul>
                <li><a href="#self-intro">Sobre mim</a></li>
-               <li><a href="">Tecnologias</a></li>
-               <li><a href="">Contato</a></li>
+               <li><a href="#tech-info">Tecnologias</a></li>
+               <li><a href="#project">Projetos</a></li>
+               <li><a href="#contact">Contato</a></li>
+               <li><a href="">Etec</a></li>
             </ul>
          </nav>
          
          <div class="main-banner" >
-            <span>PORTFOLIO</span>
+            <span>PORTFÓLIO</span>
             <p>Desenvolvedora <a></a></p>
          </div>
          <div class="waves-intro" >
@@ -40,7 +44,7 @@
          <div class="self-intro" id="self-intro">
             <div class="left">
                <div class="text">
-                  <span>OLA! TUDO BEM?</span>
+                  <span>OLÁ! TUDO BEM?</span>
                   <div class="sub-text">
                      <p>
                         Eu sou a Beatriz, uma programadora Full Stack, com experiências acadêmicas e 
@@ -97,47 +101,131 @@
          <div class="phrase">
             <p>“O resultado do programa é relativo o nível de conhecimento do programador.”</p>
          </div>
-         <div class="tech-info">
+         <div class="tech-info" id="tech-info">
             <div class="left">
                <div class="tech-languages">
                   <h2>Linguagens</h2>
-                  <img src="assets/images/teconologias/html.jpg" alt="">
-                  <img src="assets/images/teconologias/css.jpg" alt="">
-                  <img src="assets/images/teconologias/php.jpg" alt="">
-                  <img src="assets/images/teconologias/react.jpg" alt="">
-                  <img src="assets/images/teconologias/mysql.jpg" alt="">
-                  <img src="assets/images/teconologias/GL.jpg" alt="">
+                  <div class="tl-images">
+                     <img src="assets/images/teconologias/html.png" alt="">
+                     <img src="assets/images/teconologias/css.png" alt="">
+                     <img src="assets/images/teconologias/php.png" alt="">
+                     <img src="assets/images/teconologias/react.png" alt="">
+                     <img src="assets/images/teconologias/my_sql.png" alt="">
+                     <img src="assets/images/teconologias/gml.png" alt="">
+                  </div>
                </div>
                <div class="technology">
                   <h2>Tecnologias</h2> 
-                  <img src="assets/images/teconologias/vscode.png" alt="">
-                  <img src="assets/images/teconologias/workbench.png" alt="">
-                  <img src="assets/images/teconologias/figma.png" alt="">
-                  <img src="assets/images/teconologias/excel.png" alt="">
-                  <img src="assets/images/teconologias/visualstudio.svg" alt="">
+                  <div class="tc-images">
+                     <img src="assets/images/teconologias/vscode.png" alt="">
+                     <img src="assets/images/teconologias/mysql.png" alt="">
+                     <img src="assets/images/teconologias/figma.png" alt="">
+                     <img src="assets/images/teconologias/excel.png" alt="">
+                  </div>
                </div>
             </div>
             <div class="right">
                <div class="education">
                   <h2>Formações</h2>
-                  <p>ETEC SJC - Desenvolvimento de Sistemas (2023 - hoje)</p>
+                  <hr>
+                  <p><span>2023 - 2025:</span><br>Etec SJC - Desenvolvimento de Sistemas</p>
                </div>
                <div class="soft-skills">
                   <h2>Soft Skills</h2>
-                  <p>Comunicação</p>
-                  <p>Trabalho em equipe</p>
-                  <p>Resolução de problemas</p>
-                  <p>Gestão de tempo</p>
-                  <p>Liderança</p>
-                  <p>Organização</p>
+                  <hr>
+                  <div class="ss-content">
+                     <div class="text">
+                        <p>Comunicação</p>
+                        <p>Trabalho em equipe</p>
+                        <p>Resolução de problemas</p>
+                     </div>
+                     <div class="hr"></div>
+                     <div class="text">
+                        <p>Gestão de tempo</p>
+                        <p>Liderança</p>
+                        <p>Organização</p>
+                     </div>
+                  </div>
                </div>
                <div class="languagues">
                   <h2>Línguas</h2>
+                  <hr>
+                  <div class="l-content">
                   <p>Português</p>
+                  <div class="hr menor"></div>  
                   <p>Inglês</p>
+                  </div>
                </div>
             </div>
          </div>
+         <div class="waves-intro" >
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+         </div> 
+         <div class="project" id="project">
+            <div class="content">
+            <span>PRINCIPAIS PROJETOS  </span>
+            <div class="projetos">
+               <div class="projeto">
+                   <a href="https://trixsz.itch.io/philips-rescue">  <img src="assets/images/capa_jogo.png" alt="Capa do jogo"> </a>
+                  <p>Philip's Rescue</p>
+               </div>
+               <div class="projeto">
+                  <a href="https://www.psicamiladellareti.com.br/"> <img src="assets/images/psi.png" alt=" site da psicologa"> </a>
+                  <p>Portfólio profissional</p>
+               </div>
+               <div class="projeto">
+                  <a href="assets/Calculadora.rar">   <img src="assets/images/calc.png" alt="calculadora"> </a>
+                  <p>Calculadora</p>
+               </div>
+            </div>
+         </div>
+         </div>  
+      <div class="contact" id="contact">
+         <span>Entre em contato.</span>
+         <div class="trens">
+         <form action="">
+            <input type="text" name="" id="" placeholder="Nome">
+            <input type="email" name="" id="" placeholder="E-mail"">
+            <input type="text" name="" id="" placeholder="Mensagem">
+            <input type="submit" value="Enviar" class="enviar">
+         </form>
+         <div class="infos">
+            <p>Informações</p>
+            <div class="info-texts">
+            <div class="info-text">
+               <i class="fa-solid fa-envelope"></i>
+               beatriz.oliveira723@etec.sp.gov.br
+            </div>
+            <div class= "info-text">
+               <i class="fa-solid fa-phone"></i>
+               (12) 99243-7449
+            </div>
+            <div class="info-text">
+               <i class="fa-brands fa-github"></i>
+               beaxx
+            </div>
+            <div class="info-text">
+               <i class="fa-brands fa-linkedin"></i>
+               Beatriz Oliveira  
+            </div>
+            <img class="face-image" src="assets/images/face.png" alt="Imagem de Face">
+         </div>
+         </div>
+      </div>
+      </div>
+      <div class="bye">
+         <div class="text">
+         <p class="title">Obrigada, <span>tchau!</span></p>
+         <p>Não esqueça de me contatar.
+            <br> 
+            Espero vê-lo em breve.
+         </p>
+      </div>
+      </div>
+      <div class="end-page">
+         <p> Copyright &copy; 2025 </p>
+       </div>
       </main>
       <script src="assets/javascript/index.js"></script>
    </body>

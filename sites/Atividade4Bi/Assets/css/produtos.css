@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face{
+    font-family: Higuen;
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("../font/Higuen\ Serif.otf");
+}
+/* https://uxdesign.cc/designing-an-e-commerce-site-for-a-toy-store-a-ux-case-study-d244f891d028 -- referenfcia p o modelo */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* cores */
+    --red: #cc3535;
+    --Darkred: #a02121;
+    --LighterBrown: #c09a7f;
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LighterGrey: #f0f1f4;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Grey:#4d4d4d;
+    --Black: #000;
+    --blackTransparent: #0000002b;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+    --transition2: 0.2s ;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: none;
+    min-width: 1024;
+    margin: auto;
+}
+
+.ad-up{
+    width: 100%;    
+    background-color: var(--LightBrown);
+    color:var(--White) ;
+    font-size: small;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-up p{
+    margin: 0;
+}
+.ad-up a{
+    color: var(--White);
+    text-decoration: none;
+}
+
+.menu-faixa{
+    padding: 40px 60px 40px 60px;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.input-search{
+    width: 100%;
+    display: flex;
+}
+#search{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid var(--MediumGrey)
+}
+.input-search svg{
+    margin-left: -16px;
+    cursor: pointer;
+}
+
+.menu-faixa span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin-bottom: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+.login-car{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.login-car a{
+    text-decoration: none;
+    color: var(--Black);
+}
+.login-car button a{
+    color: var(--Black);
+    text-decoration: none;
+}
+
+.login-car svg{
+    cursor: pointer;
+}
+
+.menu-principal{
+    padding: 0px 60px 0px 60px;
+}
+
+.menu-principal ul{
+    border-top: 1.5px solid var(--MediumGrey);
+    border-bottom: 1.5px solid var(--MediumGrey);
+    padding: 10px 0px 10px 0px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 60px;
+}
+.menu-principal a{
+    text-decoration: none;
+    color: var(--Black);
+    font-size: small;
+}
+
+.container-allProducts{
+    padding: 40px 00px 40px 0px;
+}
+
+.linha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card{
+    border: none !important;
+    border-radius: 20px !important;
+    box-shadow: var(--blackTransparent) 0px 0px 10px 1px;
+}
+.card img{
+    border-radius: 20px !important;
+}
+.cart{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1.5px solid var(--Black);
+    padding: 5px;
+}
+.precoCompra{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.precoCompra span{
+    font-size: large;
+    font-weight: 600;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.precoCompra a{
+    color: var(--Brown);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 720px) {
+    .menu-faixa{
+        display: none;
+    }
+    .menu-principal{
+        display: none;
+    }
+    .divisoria1{
+        display: none;
+    }
+}
+.container-allProducts{
+    padding: 40px 00px 40px 0px;
+}
+
+.linha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card{
+    border: none !important;
+    border-radius: 20px !important;
+    box-shadow: var(--blackTransparent) 0px 0px 10px 1px;
+}
+.card img{
+    border-radius: 20px !important;
+}
+.cart{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1.5px solid var(--Black);
+    padding: 5px;
+}
+.precoCompra{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.precoCompra p{
+    font-size: large;
+    font-weight: 600;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+}
+.precoCompra a{
+    color: var(--Brown);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+::selection{
+    background-color: var(--LightBrown);
+    color: var(--White);
+}
+
+.Rmenu-faixa{
+    padding: 10px 40px 10px 40px;
+    height: 12vh;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1.5px solid var(--MediumGrey);
+}
+
+.text-menu{
+    width: 100%;
+    display: flex;
+}
+
+.Rmenu-faixa span{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    font-size: large;
+    font-family: "Libre Baskerville", serif;
+}
+.back-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.menu-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.menu-btn svg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    border: 2px solid var(--Black);
+    border-radius: 50%;
+    color: var(--Black);
+}
+
+.Rmenu-principal{
+    transition: var(--transition);
+    transform: translateX(0);
+    z-index: 1;
+    position: fixed;
+    background-color: var(--White);
+}
+.Rmenu-principal.hidden{
+    transform: translateX(-100%);
+}
+
+.Rmenu-principal ul{
+    border-right: 1.5px solid var(--MediumGrey);
+    list-style: none;
+    width: 250px;
+    height: 88vh;
+    margin: 0px;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 60px;
+}
+.Rmenu-principal li{
+    cursor: pointer;
+    padding-left: 20px;
+    border-radius: 20px;
+    width: 90%;
+    transition: var(--transition2);
+}
+.Rmenu-principal a{
+    text-decoration: none;
+    color: var(--Black);
+}
+
+.menu-principal li:hover{
+    background-color: var(--LighterGrey);
+}
+.menu-principal li.actived{
+    background-color: var(--LightGrey);
+}
+
+@media screen and (min-width: 768px) {
+    .Rmenu-faixa{
+        display: none;
+    }
+}
+
+
+footer{
+    padding: 40px 60px 40px 60px;
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--LightBrown);
+    color: var(--White);
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 30px;
+}
+
+footer .line{
+    width: 90%;
+    border: 1px solid var(--White);
+    margin: auto;
+}
+
+footer .icon{
+    cursor: pointer;
+    transition: var(--transition2);
+}
+
+footer .icon:hover{
+    transform: scale(1.1);
+}

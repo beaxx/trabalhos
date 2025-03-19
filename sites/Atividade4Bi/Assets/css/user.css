@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face{
+    font-family: Higuen;
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("../font/Higuen\ Serif.otf");
+}
+/* https://uxdesign.cc/designing-an-e-commerce-site-for-a-toy-store-a-ux-case-study-d244f891d028 -- referenfcia p o modelo */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.main{
+    max-width: 1440px;
+    min-height: auto;
+    margin: auto;
+}
+
+:root{
+    /* cores */
+    --red: #cc3535;
+    --Darkred: #a02121;
+    --LighterBrown: #c09a7f;
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LighterGrey: #f0f1f4;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Grey:#4d4d4d;
+    --Black: #000;
+    --blackTransparent: #0000006c;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+}
+
+
+
+.content{
+    display: flex;
+    width: 100%;
+}
+
+.menu-faixa{
+    padding: 10px 40px 10px 40px;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1.5px solid var(--MediumGrey);
+    height: 12vh;
+}
+
+.text-menu{
+    width: 100%;
+    display: flex;
+}
+
+.menu-faixa span{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+.back-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+}
+.back-btn button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.back-btn svg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.menu-principal{
+    transition: var(--transition);
+    z-index: 1;
+    background-color: var(--White);
+}
+.menu-principal ul{
+    border-right: 1.5px solid var(--MediumGrey);
+    list-style: none;
+    width: 250px;
+    height: 76vh;
+    margin: 0px;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 60px;
+}
+.menu-principal li{
+    cursor: pointer;
+    padding-left: 20px;
+    border-radius: 20px;
+    width: 90%;
+    margin-left: -10px;
+}
+.menu-principal a{
+    text-decoration: none;
+    color: var(--Black);
+    font-size: large;
+}
+
+.menu-principal li:hover{
+    background-color: var(--LighterGrey);
+}
+
+.dados{
+    padding: 20px 60px 0px 60px;
+    width: 100%;    
+}
+.dados #perfil {
+    width: 100px;
+    height: 100px;  
+    border-radius: 50%;   
+    object-fit: cover; 
+}
+.nome ,.Snome{
+    width: 100%;
+}
+.dados #upload{
+    display: none;
+}
+.dados .upload-btn{
+    width: 30px;
+    height: 30px;  
+    border: 1.5px solid var(--Grey);
+    background-color: var(--White);
+    border-radius: 50%;  
+    transform: translate(250%, -100%);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dados input{
+    border-radius: var(--dist);
+    height: 40px;
+    width: 100%;
+    border: none;
+    margin: 10px 0px 0px 0px;
+    outline: none;
+    background-color: var(--LighterGrey);
+    border: none;
+    padding-left: var(--dist);
+}
+
+.dados input::placeholder{
+    color: var(--Black);
+}
+
+.line{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 40px;
+    width: 100%;
+}
+.line1{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.dados .email, #email{
+    width: 100%;
+}
+.dados #idade{
+    width: 50px;
+    padding-left: 15px;
+}
+.dados #endereco{
+    width: 99%;
+}
+
+.lineUltima{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 40px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn-sair{
+    background-color: var(--LightBrown);
+    text-decoration: none;
+    width: 120px;
+    height: 35px;
+    color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.btn-sair:active{
+    background-color: var(--Brown);
+
+}
+
+.btn-excluir{
+    background-color: var(--red);
+    text-decoration: none;
+    width: 120px;
+    height: 35px;
+    color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.btn-excluir:active{
+    background-color: var(--Darkred);
+}
+
+.body-message,
+ .body-message2 {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 1000; 
+    visibility: hidden;
+}
+
+/* Estilo do modal */
+.message, 
+.message2 {
+    display: block; 
+    color: var(--Black);
+    background-color: var(--White);
+    width: 350px; 
+    height: 200px; 
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center; 
+    position: relative;
+}
+
+
+.message-content, 
+.message-content2  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}
+.message-content2 h2{
+    font-size: 1.5rem;
+}
+#btnCancelar, 
+#btnConfirmar,
+ #btnCancelar2, 
+ #btnConfirmar2 {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 4px 0.5px var(--blackTransparent);
+    margin-top: 10px;
+}
+
+#btnCancelar,
+#btnCancelar2 {
+    background-color: var(--LighterGrey);
+    color: var(--Black);
+}
+
+#btnConfirmar, 
+#btnConfirmar2 {
+    background-color: var(--red);
+    color: var(--White);
+}
+
+.btns-end{
+    padding: 20px;
+    width: 100%;
+    border-top: 1.5px solid var(--MediumGrey);
+    display: flex;
+    justify-content: end;  /* Centraliza os itens horizontalmente */
+    align-items: center;      /* Alinha os itens verticalmente */
+    height: 10vh;
+}
+
+.btn-editar, .btn-salvar{
+    background-color: var(--LightGrey);
+    color: var(--Black) !important;
+    text-decoration: none;
+    width: 120px;
+    height: 35px;
+    color: var(--White);
+    border-radius: 20px;
+    border: none;
+    margin: 0px 10px;
+}
+.btn-salvar{
+    background-color: var(--LighterGrey);
+}
+
+.contato{
+    display: none;
+    width: 100%;
+    height: 60vh;
+    padding: 20px 20px 60px 60px;
+}
+.content-contato{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.contato span{
+    font-size: larger;
+}
+.contato textarea{
+    resize: none;
+    outline: none;
+}
+
+.btnsContato{
+    display: none;
+}
+
+.btn-enviar{
+    background-color: var(--LightGrey);
+    color: var(--Black);
+    display: flex;
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ 
+/* resposivo */
+.menu-responsivo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.menu-responsivo svg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    border: 2px solid var(--Black);
+    border-radius: 50%;
+    color: var(--Black);
+} 
+.menu-principal li.actived{
+    background-color: var(--LightGrey);
+}
+
+@media screen and (max-width:728px){
+    .menu-principal{
+        position: fixed;
+    }
+    .menu-principal ul{
+        height: 88vh;
+    }
+    .menu-principal.hidden{
+        transform: translateX(-100%);
+    }
+    .contato,.dados{
+        height: 76vh;
+    }
+    .dados-content{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:728px){
+    .menu-responsivo{
+        display: none;
+    }
+    
+}
+
+
+::selection{
+    background-color: var(--LightBrown) !important;
+    color: var(--White);
+}

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* cores */
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Black: #000;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: none;
+    min-width: 1024;
+    margin: auto;
+}
+
+.container-left{
+    background-image: url("../images/Login\ -\ Inicio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-contl h1{
+    font-family: "Playfair Display", serif;
+    padding-bottom: 10px;
+}
+
+.text-contl p{
+    font-size: medium;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+
+.text-contl span {
+    font-size: 25px;
+    cursor: pointer;
+    display: inline-block; 
+    animation-duration: 1s;
+    animation-name: quica;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+}
+
+.text-contl span a{
+    text-decoration: none;
+    color: var(--White);
+}
+
+@keyframes quica {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+
+.text-contl{
+    color: var(--White);
+    font-family: "Inter", sans-serif;
+    transition: var(--transition);
+    animation: sobe 1s;
+}
+
+@keyframes sobe{
+    0%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+.container-right{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    background-color: var(--White);
+    font-family: "Inter", sans-serif;
+
+}
+
+.container-right .btnGoogle, .container-right .btnApple,  .container-right .btnEmail{
+    border-radius: var(--dist);
+    height: 35px;
+    width: 300px;
+    border: none;
+    outline: none;
+    background-color: var(--LightGrey);
+    display: flex;
+    align-items: center;
+    padding-left: var(--dist);
+    transition: var(--transition);
+    cursor: pointer;
+    margin: auto;
+}
+
+.container-right .btnGoogle p, .container-right .btnApple p, .container-right .btnEmail p{
+    padding-left: 40px;
+}
+
+.container-right .btnGoogle img{
+    width: 30px;
+}
+
+.container-right .btnApple img{
+    width: 25px;
+}
+.container-right .btnEmail img{
+    width: 25px;
+}
+
+.btnApple:hover, .btnGoogle:hover, .btnEmail:hover{
+    background-color: var(--MediumGrey);
+}
+
+.container-right .solid-line{
+    margin: 20px auto 20px auto;
+    width: 300px;
+    border: 1px solid var(--Black);
+}
+
+.container-right input{
+    border-radius: var(--dist);
+    height: 35px;
+    width: 300px;
+    border: none;
+    margin: 10px;
+    outline: none;
+    background-color: var(--LightGrey);
+}
+
+.container-right .input-text{
+    background-color: var(--LightGrey);
+    color: var(--Black);
+    padding-left: var(--dist);
+}
+
+.container-right .input-text::placeholder{
+    color: var(--MediumGrey);
+}
+.form-cad{
+    display: none;
+}
+.container-right .btn-cadastro{
+    background-color: var(--Black);
+    color: var(--White);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+
+.container-right p a{
+    text-decoration: none;
+    color: var(--LightBrown);
+    transition: var(--transition);
+}
+
+.container-right p a:hover{
+    color: var(--Brown);
+}
+
+.container-right p, .container-right p a{
+    font-size: small;
+}
+
+.terms{
+    width: 65%;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+
+@media screen and (min-width: 720px){
+    .text-contl span {
+        display: none;
+    }
+    main{
+        flex-wrap: nowrap;
+    }
+    .container-left, .container-right{
+        flex: 1;
+    }
+}

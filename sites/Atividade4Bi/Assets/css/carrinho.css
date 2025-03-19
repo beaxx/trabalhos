@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* https://uxdesign.cc/designing-an-e-commerce-site-for-a-toy-store-a-ux-case-study-d244f891d028 -- referenfcia p o modelo */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.main{
+    max-width: 1440px;
+    min-height: auto;
+    margin: auto;
+}
+body{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+:root{
+    /* cores */
+    --red: #cc3535;
+    --Darkred: #a02121;
+    --LighterBrown: #c09a7f;
+    --LightBrown: #9B785F;
+    --Brown: #70523c;
+    --White: #FFF;
+    --LighterGrey: #f0f1f4;
+    --LightGrey: #D9D9D9;
+    --MediumGrey:#929090;
+    --Grey:#4d4d4d;
+    --Black: #000;
+    --blackTransparent: #0000006c;
+
+    /* padrão */
+    --dist: 20px;
+    --transition: all 0.5s;
+    --transition2: 0.2s ;
+}
+
+.menu-faixa{
+    padding: 40px 60px 40px 60px;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.input-search{
+    width: 100%;
+    display: flex;
+}
+#search{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid var(--MediumGrey)
+}
+.input-search svg{
+    margin-left: -16px;
+    cursor: pointer;
+}
+
+.menu-faixa span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin-bottom: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+.login-car{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.login-car a{
+    text-decoration: none;
+    color: var(--Black);
+}
+.login-car button a{
+    color: var(--Black);
+    text-decoration: none;
+}
+
+.login-car svg{
+    cursor: pointer;
+}
+
+.menu-principal{
+    padding: 0px 60px 0px 60px;
+}
+
+.menu-principal ul{
+    border-top: 1.5px solid var(--MediumGrey);
+    border-bottom: 1.5px solid var(--MediumGrey);
+    padding: 10px 0px 10px 0px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 60px;
+}
+.menu-principal a{
+    text-decoration: none;
+    color: var(--Black);
+    font-size: small;
+}
+
+
+.Rmenu-faixa{
+    padding: 10px 40px 10px 40px;
+    height: 12vh;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1.5px solid var(--MediumGrey);
+}
+
+.text-menu{
+    width: 100%;
+    display: flex;
+}
+
+.Rmenu-faixa span{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    font-size: large;
+    font-family: "Libre Baskerville", serif;
+}
+.back-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.menu-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.menu-btn svg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    border: 2px solid var(--Black);
+    border-radius: 50%;
+    color: var(--Black);
+}
+.back-btn button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.back-btn svg, .menu-btn svg{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.Rmenu-principal{
+    transition: var(--transition);
+    transform: translateX(0);
+    z-index: 1;
+    position: fixed;
+    background-color: var(--White);
+}
+.Rmenu-principal.hidden{
+    transform: translateX(-100%);
+}
+
+.Rmenu-principal ul{
+    border-right: 1.5px solid var(--MediumGrey);
+    list-style: none;
+    width: 250px;
+    height: 88vh;
+    margin: 0px;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 60px;
+}
+.Rmenu-principal li{
+    cursor: pointer;
+    padding-left: 20px;
+    border-radius: 20px;
+    width: 90%;
+    transition: var(--transition2);
+}
+.Rmenu-principal a{
+    text-decoration: none;
+    color: var(--Black);
+}
+
+.menu-principal li:hover{
+    background-color: var(--LighterGrey);
+}
+.menu-principal li.actived{
+    background-color: var(--LightGrey);
+}
+
+
+.cart{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1.5px solid var(--Black);
+    padding: 5px;
+}
+
+
+
+::selection{
+    background-color: var(--LightBrown) !important;
+    color: var(--White);
+}
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    background-color: var(--White);
+    border-top: 1.5px solid var(--Black);
+    text-align: left;
+    gap: 20px;
+}
+.dropdown-content a{
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: small;
+}
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -14px; /* Ajuste conforme necessário */
+    border-width: 7px; /* Tamanho da seta */
+    border-style: solid;
+    border-color: transparent transparent var(--Black) transparent; /* Seta para baixo */
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: var(--LightGrey);
+}
+
+.content{
+    padding: 20px 60px 0px 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center ;
+    flex-wrap: wrap;
+}
+.content span{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin-bottom: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.container-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.container-content{
+    text-align: center;
+}
+
+.menu-end {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10; 
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--White);
+}
+
+
+
+.menu-end a{
+    background-color: var(--LightBrown);
+    border: none;
+    transition: var(--transition2);
+}
+
+.menu-end a:focus, .menu-end a:active, .menu-end a:checked, .menu-end a:hover{
+    background-color: var(--Brown) !important;
+}
+.produto{
+    padding: 20px;
+    display: flex;
+    box-shadow: 0px 0px 10px 2px var(--blackTransparent);
+    border-radius: 20px;
+    width: fit-content ;
+    gap: 20px;
+    justify-content: left;
+    text-align: left;
+    
+    flex: 1;
+}
+.produto img{
+    object-fit: contain;
+    width: 100px;
+}
+
+.produto .btnRemove{
+    color: var(--Brown) !important;
+}
+
+.input-quantidade{
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: 1.5px solid var(--Black);
+    padding-left: 5px;
+}
+
+.produto .inner-text{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.produto button{
+    background-color: var(--LightBrown);
+    color: var(--White);
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.produto span{
+    width: 100%;
+    font-size: large;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .Rmenu-faixa{
+        display: none;
+    }
+    .container-produtos{
+        width: 100% !important;
+    }
+    .produto{
+        justify-content: center;
+        text-align: center;
+          
+    }
+
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    .menu-faixa{
+        display: none;
+    }
+    .menu-principal{
+        display: none;
+    }
+    .divisoria1{
+        display: none;
+    }
+
+}
